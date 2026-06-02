@@ -1,0 +1,57 @@
+{"level":"error","message":"Register Error: next is not a function","timestamp":"2026-06-02 22:21:09"}
+{"level":"error","message":"POST /api/auth/register — 500 [151ms]","timestamp":"2026-06-02 22:21:09"}
+{"level":"error","message":"Register Error: next is not a function","timestamp":"2026-06-02 22:27:45"}
+{"level":"error","message":"POST /api/auth/register — 500 [119ms]","timestamp":"2026-06-02 22:27:45"}
+{"level":"error","message":"Register Error: next is not a function","timestamp":"2026-06-02 22:35:43"}
+{"level":"error","message":"POST /api/auth/register — 500 [108ms]","timestamp":"2026-06-02 22:35:43"}
+{"level":"error","message":"PUT /api/properties/6a1eb51f53c9161e86faf7ae — 401 [33ms]","timestamp":"2026-06-02 23:23:23"}
+{"level":"error","message":"GET /api/auth/me — 401 [34ms]","timestamp":"2026-06-02 23:24:23"}
+{"level":"error","message":"PUT /api/properties/6a1ebb85f98ff96129ac6238 — 401 [33ms]","timestamp":"2026-06-02 23:25:12"}
+{"level":"error","message":"POST /api/bookings — 401 [33ms]","timestamp":"2026-06-02 23:26:26"}
+{"level":"error","message":"Update Booking Error: Cast to ObjectId failed for value \"<BOOKING-ID>\" (type string) at path \"_id\" for model \"Booking\"","timestamp":"2026-06-02 23:29:17"}
+{"level":"error","message":"PUT /api/bookings/%3CBOOKING-ID%3E/status — 500 [35ms]","timestamp":"2026-06-02 23:29:17"}
+{"level":"error","message":"POST /api/auth/login — 401 [116ms]","timestamp":"2026-06-02 23:33:36"}
+{"level":"error","message":"POST /api/properties — 403 [35ms]","timestamp":"2026-06-02 23:34:23"}
+{"level":"error","message":"POST /api/auth/login — 401 [31ms]","timestamp":"2026-06-03 00:14:40"}
+{"level":"error","message":"Register Error: Operation `users.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03 00:27:12"}
+{"level":"error","message":"POST /api/auth/register — 500 [10032ms]","timestamp":"2026-06-03 00:27:12"}
+{"level":"error","message":"Register Error: Operation `users.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"POST /api/auth/register — 500 [10016ms]","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"POST /api/properties — 401 [26ms]","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"POST /api/properties — 401 [13ms]","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"POST /api/properties — 401 [2ms]","timestamp":"2026-06-03 00:27:22"}
+{"level":"error","message":"GET /api/properties/undefined — 500 [3ms]","timestamp":"2026-06-03 00:27:24"}
+{"level":"error","message":"GET /api/properties/000000000000000000000000 — 404 [38ms]","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"PUT /api/properties/undefined — 401 [13ms]","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"PUT /api/properties/undefined — 401 [9ms]","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"DELETE /api/properties/undefined — 401 [12ms]","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"DELETE /api/properties/undefined — 401 [12ms]","timestamp":"2026-06-03 00:27:25"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 00:27:26"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 00:27:26"}
+{"level":"error","message":"POST /api/auth/register — 400 [35ms]","timestamp":"2026-06-03 00:27:26"}
+{"level":"error","message":"POST /api/auth/login — 401 [115ms]","timestamp":"2026-06-03 00:27:27"}
+{"level":"error","message":"POST /api/auth/login — 401 [36ms]","timestamp":"2026-06-03 00:27:27"}
+{"level":"error","message":"POST /api/auth/login — 400 [1ms]","timestamp":"2026-06-03 00:27:27"}
+{"level":"error","message":"GET /api/auth/me — 401 [2ms]","timestamp":"2026-06-03 00:27:27"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:27:27"}
+{"level":"error","message":"GET /api/auth/me — 401 [11ms]","timestamp":"2026-06-03 00:27:27"}
+{"level":"error","message":"POST /api/properties — 403 [56ms]","timestamp":"2026-06-03 00:30:54"}
+{"level":"error","message":"POST /api/properties — 401 [2ms]","timestamp":"2026-06-03 00:30:54"}
+{"level":"error","message":"GET /api/properties/000000000000000000000000 — 404 [55ms]","timestamp":"2026-06-03 00:30:54"}
+{"level":"error","message":"PUT /api/properties/6a1eccfe759c348b20c165c6 — 403 [39ms]","timestamp":"2026-06-03 00:30:55"}
+{"level":"error","message":"DELETE /api/properties/6a1eccfe759c348b20c165c6 — 403 [44ms]","timestamp":"2026-06-03 00:30:55"}
+{"level":"error","message":"POST /api/auth/register — 400 [1ms]","timestamp":"2026-06-03 00:30:58"}
+{"level":"error","message":"POST /api/auth/register — 400 [1ms]","timestamp":"2026-06-03 00:30:58"}
+{"level":"error","message":"POST /api/auth/register — 400 [36ms]","timestamp":"2026-06-03 00:30:58"}
+{"level":"error","message":"POST /api/auth/login — 401 [110ms]","timestamp":"2026-06-03 00:30:59"}
+{"level":"error","message":"POST /api/auth/login — 401 [33ms]","timestamp":"2026-06-03 00:30:59"}
+{"level":"error","message":"POST /api/auth/login — 400 [1ms]","timestamp":"2026-06-03 00:30:59"}
+{"level":"error","message":"GET /api/auth/me — 401 [2ms]","timestamp":"2026-06-03 00:30:59"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:30:59"}
+{"level":"error","message":"GET /api/auth/me — 401 [13ms]","timestamp":"2026-06-03 00:30:59"}
