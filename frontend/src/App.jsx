@@ -6,40 +6,47 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import PropertyList from './pages/PropertyList';
 import PropertyDetail from './pages/PropertyDetail';
-import TenantDashboard from './pages/TenantDashboard';
-import OwnerDashboard from './pages/OwnerDashboard';
+import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Navbar />
         <Routes>
+          {/* Public Routes — Navbar dikhega */}
           <Route path="/" element={<Navigate to="/properties" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/properties" element={<PropertyList />} />
-          <Route path="/properties/:id" element={<PropertyDetail />} />
-          <Route path="/tenant" element={
-            <ProtectedRoute allowedRoles={['tenant']}>
-              <TenantDashboard />
+          <Route path="/properties" element={<><Navbar /><PropertyList /></>} />
+          <Route path="/properties/:id" element={<><Navbar /><PropertyDetail /></>} />
+
+          {/* User Dashboard — Sidebar hoga */}
+          <Route path="/dashboard" element={
+            <ProtectedRoute allowedRoles={['user']}>
+              <UserDashboard />
             </ProtectedRoute>
           } />
-          <Route path="/owner" element={
-            <ProtectedRoute allowedRoles={['owner']}>
-              <OwnerDashboard />
-            </ProtectedRoute>
-          } />
+
+          {/* Admin Dashboard — Sidebar hoga */}
           <Route path="/admin" element={
             <ProtectedRoute allowedRoles={['admin']}>
               <AdminDashboard />
             </ProtectedRoute>
           } />
+
+          {/* Unauthorized */}
           <Route path="/unauthorized" element={
-            <h2 style={{textAlign:'center', marginTop:'50px'}}>
-              ❌ Access Denied!
-            </h2>
+            <div style={{ textAlign: 'center', marginTop: '80px' }}>
+              <div style={{ fontSize: '48px' }}>🚫</div>
+              <h2 style={{ marginTop: '16px' }}>Access Denied!</h2>
+              <p style={{ color: '#6b7280', marginTop: '8px' }}>
+                You don't have permission to access this page.
+              </p>
+              <a href="/login" style={{ color: '#7c3aed', marginTop: '16px', display: 'inline-block' }}>
+                Go to Login
+              </a>
+            </div>
           } />
         </Routes>
       </BrowserRouter>

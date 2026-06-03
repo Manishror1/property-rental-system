@@ -253,3 +253,552 @@
 {"level":"error","message":"GET /api/auth/me — 401 [2ms]","timestamp":"2026-06-03 00:30:59"}
 {"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 00:30:59"}
 {"level":"error","message":"GET /api/auth/me — 401 [13ms]","timestamp":"2026-06-03 00:30:59"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 00:58:28"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 00:58:28"}
+{"level":"info","message":"Auth: User logged in — admin@test.com","timestamp":"2026-06-03 00:59:10"}
+{"level":"info","message":"POST /api/auth/login — 200 [216ms]","timestamp":"2026-06-03 00:59:10"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/admin/users — 200 [119ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/bookings — 304 [195ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/admin/users — 304 [117ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/admin/stats — 200 [324ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/bookings — 304 [117ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/properties?status=available — 200 [357ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/admin/stats — 304 [74ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [71ms]","timestamp":"2026-06-03 00:59:11"}
+{"level":"info","message":"Auth: User logged in — sarah@test.com","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"POST /api/auth/login — 200 [177ms]","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [69ms]","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [100ms]","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [68ms]","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [106ms]","timestamp":"2026-06-03 01:01:56"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"Property: Updated \"Modern 3 Bedroom House Auckland\"","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"PUT /api/properties/6a1ebc8af98ff96129ac623a — 200 [112ms]","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [69ms]","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [100ms]","timestamp":"2026-06-03 01:02:27"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [80ms]","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [143ms]","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [71ms]","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [103ms]","timestamp":"2026-06-03 01:02:44"}
+{"level":"info","message":"Auth: User logged in — saraH@test.com","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"POST /api/auth/login — 200 [583ms]","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [288ms]","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [325ms]","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [65ms]","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 12:56:44"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [104ms]","timestamp":"2026-06-03 12:56:45"}
+{"level":"info","message":"Auth: User logged in — sarah@test.com","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"POST /api/auth/login — 200 [261ms]","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [109ms]","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [138ms]","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"Auth: sarah@test.com (owner) authenticated","timestamp":"2026-06-03 13:41:31"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [68ms]","timestamp":"2026-06-03 13:41:32"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [102ms]","timestamp":"2026-06-03 13:41:32"}
+{"level":"info","message":"Auth: New user registered — joe@gmail.com","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"POST /api/auth/register — 201 [273ms]","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 200 [65ms]","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"GET /api/notifications — 200 [74ms]","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [68ms]","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"GET /api/notifications — 304 [69ms]","timestamp":"2026-06-03 13:42:37"}
+{"level":"info","message":"GET /api/properties — 200 [32ms]","timestamp":"2026-06-03 13:42:41"}
+{"level":"info","message":"GET /api/properties — 304 [35ms]","timestamp":"2026-06-03 13:42:41"}
+{"level":"info","message":"GET /api/properties — 304 [33ms]","timestamp":"2026-06-03 13:42:45"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [70ms]","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"GET /api/notifications — 304 [69ms]","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"Auth: joe@gmail.com (tenant) authenticated","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [65ms]","timestamp":"2026-06-03 13:42:46"}
+{"level":"info","message":"GET /api/notifications — 304 [69ms]","timestamp":"2026-06-03 13:42:46"}
+{"level":"warn","message":"Auth: Failed login — admin@test.com","timestamp":"2026-06-03 13:43:16"}
+{"level":"error","message":"POST /api/auth/login — 401 [141ms]","timestamp":"2026-06-03 13:43:16"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 13:43:48"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 13:43:48"}
+{"level":"info","message":"Auth: User logged in — admin@test.com","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"POST /api/auth/login — 200 [197ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/admin/users — 200 [113ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/bookings — 304 [164ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/admin/users — 304 [97ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/admin/stats — 200 [295ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/bookings — 304 [119ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/properties?status=available — 200 [318ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [32ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"GET /api/admin/stats — 304 [75ms]","timestamp":"2026-06-03 13:44:15"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"Admin: owner_1780403246438@test.com set to inactive","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"PUT /api/admin/users/6a1ecc2ef8e088c5f9cd53cf/toggle — 200 [123ms]","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [36ms]","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"GET /api/admin/users — 200 [73ms]","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"GET /api/bookings — 304 [135ms]","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"GET /api/admin/stats — 304 [282ms]","timestamp":"2026-06-03 13:44:26"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:08:04"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:08:04"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:14:46"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:14:46"}
+{"level":"info","message":"GET /api/health — 200 [9ms]","timestamp":"2026-06-03 14:15:19"}
+{"level":"error","message":"POST /api/bookings — 401 [1ms]","timestamp":"2026-06-03 14:15:30"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:30:07"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:30:07"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:31:59"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:31:59"}
+{"level":"info","message":"GET /api/health — 200 [30ms]","timestamp":"2026-06-03 14:34:46"}
+{"level":"info","message":"Auth: New user registered — admin@test.com","timestamp":"2026-06-03 14:35:14"}
+{"level":"info","message":"POST /api/auth/register — 201 [586ms]","timestamp":"2026-06-03 14:35:14"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 14:36:06"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:37:58"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:37:58"}
+{"level":"error","message":"POST /api/auth/register — 400 [9ms]","timestamp":"2026-06-03 14:38:08"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:39:16"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:39:16"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:39:21"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:39:26"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:39:27"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:39:34"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:39:34"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:40:04"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:40:04"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:40:08"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:40:08"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:40:37"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:40:37"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:40:50"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:40:50"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:41:21"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:41:21"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:41:38"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:41:38"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:41:43"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:41:43"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:41:47"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:41:48"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:41:51"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:41:51"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:41:55"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:41:55"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:42:04"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:42:04"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:42:13"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:42:13"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:42:18"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:42:18"}
+{"level":"info","message":"GET /api/health — 200 [38ms]","timestamp":"2026-06-03 14:43:03"}
+{"level":"info","message":"Auth: New user registered — manish@test.com","timestamp":"2026-06-03 14:43:46"}
+{"level":"info","message":"POST /api/auth/register — 201 [611ms]","timestamp":"2026-06-03 14:43:46"}
+{"level":"info","message":"Auth: New user registered — sarah@test.com","timestamp":"2026-06-03 14:44:55"}
+{"level":"info","message":"POST /api/auth/register — 201 [535ms]","timestamp":"2026-06-03 14:44:55"}
+{"level":"info","message":"Auth: User logged in — manish@test.com","timestamp":"2026-06-03 14:48:41"}
+{"level":"info","message":"POST /api/auth/login — 200 [416ms]","timestamp":"2026-06-03 14:48:41"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 14:51:30"}
+{"level":"info","message":"GET /api/auth/me — 200 [99ms]","timestamp":"2026-06-03 14:51:30"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 14:52:36"}
+{"level":"error","message":"POST /api/properties — 400 [122ms]","timestamp":"2026-06-03 14:52:36"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 14:56:59"}
+{"level":"error","message":"POST /api/properties — 400 [254ms]","timestamp":"2026-06-03 14:56:59"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 14:58:42"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 14:58:43"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-01.tfwkbbt.mongodb.net","timestamp":"2026-06-03 15:00:24"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 15:00:25"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 15:00:39"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 15:00:39"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:00:48"}
+{"level":"info","message":"Property: Created \"Modern 3 Bedroom House Auckland\" by manish@test.com","timestamp":"2026-06-03 15:00:48"}
+{"level":"info","message":"POST /api/properties — 201 [248ms]","timestamp":"2026-06-03 15:00:48"}
+{"level":"info","message":"GET /api/properties — 200 [146ms]","timestamp":"2026-06-03 15:03:20"}
+{"level":"info","message":"GET /api/properties?city=Auckland — 200 [74ms]","timestamp":"2026-06-03 15:04:11"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 200 [75ms]","timestamp":"2026-06-03 15:04:33"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:05:56"}
+{"level":"warn","message":"Authorization denied: manish@test.com tried restricted route","timestamp":"2026-06-03 15:05:56"}
+{"level":"error","message":"POST /api/bookings — 403 [39ms]","timestamp":"2026-06-03 15:05:56"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:07:01"}
+{"level":"warn","message":"Authorization denied: sarah@test.com tried restricted route","timestamp":"2026-06-03 15:07:01"}
+{"level":"error","message":"POST /api/bookings — 403 [42ms]","timestamp":"2026-06-03 15:07:01"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:07:47"}
+{"level":"warn","message":"Authorization denied: sarah@test.com tried restricted route","timestamp":"2026-06-03 15:07:47"}
+{"level":"error","message":"POST /api/bookings — 403 [66ms]","timestamp":"2026-06-03 15:07:47"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-03 15:09:45"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 15:09:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:09:50"}
+{"level":"error","message":"POST /api/bookings — 404 [119ms]","timestamp":"2026-06-03 15:09:50"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:10:33"}
+{"level":"info","message":"Booking: New request by sarah@test.com for \"Modern 3 Bedroom House Auckland\"","timestamp":"2026-06-03 15:10:33"}
+{"level":"info","message":"POST /api/bookings — 201 [318ms]","timestamp":"2026-06-03 15:10:33"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:13:18"}
+{"level":"error","message":"POST /api/bookings — 400 [105ms]","timestamp":"2026-06-03 15:13:19"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:14:29"}
+{"level":"error","message":"POST /api/bookings — 400 [151ms]","timestamp":"2026-06-03 15:14:29"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:16:13"}
+{"level":"info","message":"Booking: Status updated to \"approved\" by manish@test.com","timestamp":"2026-06-03 15:16:14"}
+{"level":"info","message":"PUT /api/bookings/6a1f9b29bc4f4a4e24cb44f3/status — 200 [232ms]","timestamp":"2026-06-03 15:16:14"}
+{"level":"error","message":"POST /api/bookings/my-bookings — 404 [2ms]","timestamp":"2026-06-03 15:18:17"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:22:58"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 200 [109ms]","timestamp":"2026-06-03 15:22:59"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:24:55"}
+{"level":"info","message":"GET /api/bookings/requests — 200 [104ms]","timestamp":"2026-06-03 15:24:55"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:25:32"}
+{"level":"info","message":"GET /api/admin/stats — 200 [345ms]","timestamp":"2026-06-03 15:25:32"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:25:56"}
+{"level":"info","message":"GET /api/admin/users — 200 [75ms]","timestamp":"2026-06-03 15:25:56"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:26:35"}
+{"level":"info","message":"POST /api/notifications/test — 200 [124ms]","timestamp":"2026-06-03 15:26:35"}
+{"level":"warn","message":"Auth: Failed login — manish@test.com","timestamp":"2026-06-03 15:27:52"}
+{"level":"error","message":"POST /api/auth/login — 401 [565ms]","timestamp":"2026-06-03 15:27:52"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:30:20"}
+{"level":"warn","message":"Authorization denied: sarah@test.com tried restricted route","timestamp":"2026-06-03 15:30:20"}
+{"level":"error","message":"GET /api/admin/users — 403 [298ms]","timestamp":"2026-06-03 15:30:20"}
+{"level":"info","message":"GET /api/properties — 200 [216ms]","timestamp":"2026-06-03 15:40:51"}
+{"level":"info","message":"GET /api/properties — 304 [81ms]","timestamp":"2026-06-03 15:40:51"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 200 [64ms]","timestamp":"2026-06-03 15:40:59"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 304 [65ms]","timestamp":"2026-06-03 15:41:00"}
+{"level":"warn","message":"Auth: Failed login — manish@test.com","timestamp":"2026-06-03 15:41:40"}
+{"level":"error","message":"POST /api/auth/login — 401 [128ms]","timestamp":"2026-06-03 15:41:40"}
+{"level":"info","message":"Auth: User logged in — manish@test.com","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"POST /api/auth/login — 200 [141ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [68ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/notifications — 200 [166ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [169ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [387ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/bookings/requests — 200 [382ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [63ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [90ms]","timestamp":"2026-06-03 15:42:12"}
+{"level":"info","message":"GET /api/notifications/vapid-key — 200 [2ms]","timestamp":"2026-06-03 15:42:36"}
+{"level":"info","message":"GET /api/properties — 304 [62ms]","timestamp":"2026-06-03 15:42:41"}
+{"level":"info","message":"GET /api/properties — 304 [68ms]","timestamp":"2026-06-03 15:42:41"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [59ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [66ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [101ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [66ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [96ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/notifications — 304 [263ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [259ms]","timestamp":"2026-06-03 15:42:48"}
+{"level":"info","message":"GET /api/properties — 304 [58ms]","timestamp":"2026-06-03 15:44:20"}
+{"level":"info","message":"GET /api/properties — 304 [62ms]","timestamp":"2026-06-03 15:44:20"}
+{"level":"info","message":"GET /api/properties?city=we — 200 [31ms]","timestamp":"2026-06-03 15:44:27"}
+{"level":"info","message":"GET /api/properties — 304 [61ms]","timestamp":"2026-06-03 15:44:33"}
+{"level":"info","message":"GET /api/properties — 304 [67ms]","timestamp":"2026-06-03 15:44:35"}
+{"level":"info","message":"Auth: User logged in — admin@test.com","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"POST /api/auth/login — 200 [122ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/admin/users — 200 [67ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/properties?status=available — 200 [92ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/bookings — 200 [130ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/admin/users — 304 [77ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [114ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/bookings — 304 [102ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/admin/stats — 200 [392ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"GET /api/admin/stats — 304 [67ms]","timestamp":"2026-06-03 15:44:51"}
+{"level":"info","message":"Auth: User logged in — manish@test.com","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"POST /api/auth/login — 200 [110ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [68ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [75ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/notifications — 304 [77ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [121ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [61ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [60ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:18"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [95ms]","timestamp":"2026-06-03 15:45:19"}
+{"level":"info","message":"GET /api/properties — 304 [61ms]","timestamp":"2026-06-03 15:45:30"}
+{"level":"info","message":"GET /api/properties — 304 [62ms]","timestamp":"2026-06-03 15:45:31"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [59ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [66ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [91ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [59ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [60ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [92ms]","timestamp":"2026-06-03 15:45:42"}
+{"level":"info","message":"GET /api/properties — 304 [60ms]","timestamp":"2026-06-03 15:45:49"}
+{"level":"info","message":"GET /api/properties — 304 [67ms]","timestamp":"2026-06-03 15:45:49"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [62ms]","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/notifications — 304 [59ms]","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [67ms]","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [99ms]","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [61ms]","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [56ms]","timestamp":"2026-06-03 15:45:52"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-03 15:45:53"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:45:53"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [91ms]","timestamp":"2026-06-03 15:45:53"}
+{"level":"info","message":"GET /api/properties — 304 [62ms]","timestamp":"2026-06-03 15:46:03"}
+{"level":"info","message":"GET /api/properties — 304 [61ms]","timestamp":"2026-06-03 15:46:03"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [61ms]","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [61ms]","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [98ms]","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [68ms]","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [69ms]","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-03 15:46:06"}
+{"level":"info","message":"GET /api/notifications — 304 [71ms]","timestamp":"2026-06-03 15:46:07"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [92ms]","timestamp":"2026-06-03 15:46:07"}
+{"level":"info","message":"Auth: User logged in — sarah@test.com","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"POST /api/auth/login — 200 [118ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [70ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/bookings/requests — 200 [71ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/notifications — 200 [78ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 200 [109ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [61ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [61ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [93ms]","timestamp":"2026-06-03 15:47:11"}
+{"level":"info","message":"GET /api/properties — 304 [70ms]","timestamp":"2026-06-03 15:48:19"}
+{"level":"info","message":"GET /api/properties — 304 [62ms]","timestamp":"2026-06-03 15:48:19"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 304 [60ms]","timestamp":"2026-06-03 15:48:24"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 304 [60ms]","timestamp":"2026-06-03 15:48:24"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [77ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [76ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/notifications — 304 [80ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [135ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [59ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [61ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [98ms]","timestamp":"2026-06-03 15:51:41"}
+{"level":"info","message":"Auth: New user registered — lister_1780458773652@test.com","timestamp":"2026-06-03 15:52:53"}
+{"level":"info","message":"POST /api/auth/register — 201 [201ms]","timestamp":"2026-06-03 15:52:53"}
+{"level":"info","message":"Auth: New user registered — booker_1780458773927@test.com","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"POST /api/auth/register — 201 [152ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Auth: lister_1780458773652@test.com (user) authenticated","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Property: Created \"Test House Auckland\" by lister_1780458773652@test.com","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"POST /api/properties — 201 [94ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"error","message":"POST /api/properties — 401 [3ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"GET /api/properties — 200 [76ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"GET /api/properties?city=Auckland — 200 [71ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"GET /api/properties?bedrooms=3 — 200 [71ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"GET /api/properties/6a1fa51657ccc53fbd5248de — 200 [72ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"error","message":"GET /api/properties/000000000000000000000000 — 404 [38ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Auth: lister_1780458773652@test.com (user) authenticated","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Property: Updated \"Test House Auckland\"","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"PUT /api/properties/6a1fa51657ccc53fbd5248de — 200 [127ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Auth: booker_1780458773927@test.com (user) authenticated","timestamp":"2026-06-03 15:52:54"}
+{"level":"error","message":"PUT /api/properties/6a1fa51657ccc53fbd5248de — 403 [75ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Auth: booker_1780458773927@test.com (user) authenticated","timestamp":"2026-06-03 15:52:54"}
+{"level":"error","message":"DELETE /api/properties/6a1fa51657ccc53fbd5248de — 403 [87ms]","timestamp":"2026-06-03 15:52:54"}
+{"level":"info","message":"Auth: lister_1780458773652@test.com (user) authenticated","timestamp":"2026-06-03 15:52:55"}
+{"level":"info","message":"Property: Deleted by lister_1780458773652@test.com","timestamp":"2026-06-03 15:52:55"}
+{"level":"info","message":"DELETE /api/properties/6a1fa51657ccc53fbd5248de — 200 [120ms]","timestamp":"2026-06-03 15:52:55"}
+{"level":"info","message":"Auth: New user registered — user_1780458778269@test.com","timestamp":"2026-06-03 15:52:58"}
+{"level":"info","message":"POST /api/auth/register — 201 [172ms]","timestamp":"2026-06-03 15:52:58"}
+{"level":"info","message":"Auth: New user registered — admin_1780458778460@test.com","timestamp":"2026-06-03 15:52:58"}
+{"level":"info","message":"POST /api/auth/register — 201 [157ms]","timestamp":"2026-06-03 15:52:58"}
+{"level":"error","message":"POST /api/auth/register — 400 [1ms]","timestamp":"2026-06-03 15:52:58"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 15:52:58"}
+{"level":"info","message":"Auth: New user registered — dup_1780458778665@test.com","timestamp":"2026-06-03 15:52:58"}
+{"level":"info","message":"POST /api/auth/register — 201 [155ms]","timestamp":"2026-06-03 15:52:58"}
+{"level":"error","message":"POST /api/auth/register — 400 [36ms]","timestamp":"2026-06-03 15:52:58"}
+{"level":"info","message":"Auth: New user registered — login_1780458775833@test.com","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"POST /api/auth/register — 201 [153ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"Auth: User logged in — login_1780458775833@test.com","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"POST /api/auth/login — 200 [116ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"warn","message":"Auth: Failed login — login_1780458775833@test.com","timestamp":"2026-06-03 15:52:59"}
+{"level":"error","message":"POST /api/auth/login — 401 [117ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"error","message":"POST /api/auth/login — 401 [35ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"error","message":"POST /api/auth/login — 400 [1ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"Auth: New user registered — me_1780458775833@test.com","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"POST /api/auth/register — 201 [151ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"Auth: User logged in — me_1780458775833@test.com","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"POST /api/auth/login — 200 [111ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"Auth: me_1780458775833@test.com (user) authenticated","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"GET /api/auth/me — 200 [71ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"error","message":"GET /api/auth/me — 401 [2ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 15:52:59"}
+{"level":"error","message":"GET /api/auth/me — 401 [13ms]","timestamp":"2026-06-03 15:52:59"}
+{"level":"info","message":"Auth: New user registered — lister_1780458808365@test.com","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"POST /api/auth/register — 201 [214ms]","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"Auth: New user registered — booker_1780458808641@test.com","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"POST /api/auth/register — 201 [172ms]","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"Auth: lister_1780458808365@test.com (user) authenticated","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"Property: Created \"Test House Auckland\" by lister_1780458808365@test.com","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"POST /api/properties — 201 [93ms]","timestamp":"2026-06-03 15:53:28"}
+{"level":"error","message":"POST /api/properties — 401 [3ms]","timestamp":"2026-06-03 15:53:28"}
+{"level":"info","message":"GET /api/properties — 200 [81ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"GET /api/properties?city=Auckland — 200 [73ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"GET /api/properties?bedrooms=3 — 200 [87ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"GET /api/properties/6a1fa5386aecc54c5b86ae96 — 200 [117ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"error","message":"GET /api/properties/000000000000000000000000 — 404 [45ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Auth: lister_1780458808365@test.com (user) authenticated","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Property: Updated \"Test House Auckland\"","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"PUT /api/properties/6a1fa5386aecc54c5b86ae96 — 200 [136ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Auth: booker_1780458808641@test.com (user) authenticated","timestamp":"2026-06-03 15:53:29"}
+{"level":"error","message":"PUT /api/properties/6a1fa5386aecc54c5b86ae96 — 403 [90ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Auth: booker_1780458808641@test.com (user) authenticated","timestamp":"2026-06-03 15:53:29"}
+{"level":"error","message":"DELETE /api/properties/6a1fa5386aecc54c5b86ae96 — 403 [84ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Auth: lister_1780458808365@test.com (user) authenticated","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Property: Deleted by lister_1780458808365@test.com","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"DELETE /api/properties/6a1fa5386aecc54c5b86ae96 — 200 [115ms]","timestamp":"2026-06-03 15:53:29"}
+{"level":"info","message":"Auth: New user registered — user_1780458813056@test.com","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"POST /api/auth/register — 201 [184ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"Auth: New user registered — admin_1780458813262@test.com","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"POST /api/auth/register — 201 [163ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"Auth: New user registered — dup_1780458813487@test.com","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"POST /api/auth/register — 201 [163ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"error","message":"POST /api/auth/register — 400 [32ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"Auth: New user registered — login_1780458810619@test.com","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"POST /api/auth/register — 201 [146ms]","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"Auth: User logged in — login_1780458810619@test.com","timestamp":"2026-06-03 15:53:33"}
+{"level":"info","message":"POST /api/auth/login — 200 [121ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"warn","message":"Auth: Failed login — login_1780458810619@test.com","timestamp":"2026-06-03 15:53:34"}
+{"level":"error","message":"POST /api/auth/login — 401 [111ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"error","message":"POST /api/auth/login — 401 [33ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"error","message":"POST /api/auth/login — 400 [1ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"Auth: New user registered — me_1780458810620@test.com","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"POST /api/auth/register — 201 [152ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"Auth: User logged in — me_1780458810620@test.com","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"POST /api/auth/login — 200 [115ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"Auth: me_1780458810620@test.com (user) authenticated","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"GET /api/auth/me — 200 [69ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"error","message":"GET /api/auth/me — 401 [3ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 15:53:34"}
+{"level":"error","message":"GET /api/auth/me — 401 [13ms]","timestamp":"2026-06-03 15:53:34"}
+{"level":"info","message":"Auth: New user registered — lister_1780459053240@test.com","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"POST /api/auth/register — 201 [230ms]","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"Auth: New user registered — booker_1780459053530@test.com","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"POST /api/auth/register — 201 [236ms]","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"Auth: lister_1780459053240@test.com (user) authenticated","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"Property: Created \"Test House Auckland\" by lister_1780459053240@test.com","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"POST /api/properties — 201 [85ms]","timestamp":"2026-06-03 15:57:33"}
+{"level":"error","message":"POST /api/properties — 401 [3ms]","timestamp":"2026-06-03 15:57:33"}
+{"level":"info","message":"GET /api/properties — 200 [109ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"GET /api/properties?city=Auckland — 200 [165ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"GET /api/properties?bedrooms=3 — 200 [148ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"GET /api/properties/6a1fa62d8d816952baefb632 — 200 [109ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"error","message":"GET /api/properties/000000000000000000000000 — 404 [63ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"Auth: lister_1780459053240@test.com (user) authenticated","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"Property: Updated \"Test House Auckland\"","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"PUT /api/properties/6a1fa62d8d816952baefb632 — 200 [210ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"Auth: booker_1780459053530@test.com (user) authenticated","timestamp":"2026-06-03 15:57:34"}
+{"level":"error","message":"PUT /api/properties/6a1fa62d8d816952baefb632 — 403 [145ms]","timestamp":"2026-06-03 15:57:34"}
+{"level":"info","message":"Auth: booker_1780459053530@test.com (user) authenticated","timestamp":"2026-06-03 15:57:35"}
+{"level":"error","message":"DELETE /api/properties/6a1fa62d8d816952baefb632 — 403 [80ms]","timestamp":"2026-06-03 15:57:35"}
+{"level":"info","message":"Auth: lister_1780459053240@test.com (user) authenticated","timestamp":"2026-06-03 15:57:35"}
+{"level":"info","message":"Property: Deleted by lister_1780459053240@test.com","timestamp":"2026-06-03 15:57:35"}
+{"level":"info","message":"DELETE /api/properties/6a1fa62d8d816952baefb632 — 200 [170ms]","timestamp":"2026-06-03 15:57:35"}
+{"level":"info","message":"Auth: New user registered — user_1780459058535@test.com","timestamp":"2026-06-03 15:57:38"}
+{"level":"info","message":"POST /api/auth/register — 201 [160ms]","timestamp":"2026-06-03 15:57:38"}
+{"level":"info","message":"Auth: New user registered — admin_1780459058715@test.com","timestamp":"2026-06-03 15:57:38"}
+{"level":"info","message":"POST /api/auth/register — 201 [153ms]","timestamp":"2026-06-03 15:57:38"}
+{"level":"error","message":"POST /api/auth/register — 400 [1ms]","timestamp":"2026-06-03 15:57:38"}
+{"level":"error","message":"POST /api/auth/register — 400 [2ms]","timestamp":"2026-06-03 15:57:38"}
+{"level":"info","message":"Auth: New user registered — dup_1780459058922@test.com","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"POST /api/auth/register — 201 [161ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"error","message":"POST /api/auth/register — 400 [36ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"Auth: New user registered — login_1780459055868@test.com","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"POST /api/auth/register — 201 [158ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"Auth: User logged in — login_1780459055868@test.com","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"POST /api/auth/login — 200 [114ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"warn","message":"Auth: Failed login — login_1780459055868@test.com","timestamp":"2026-06-03 15:57:39"}
+{"level":"error","message":"POST /api/auth/login — 401 [115ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"error","message":"POST /api/auth/login — 401 [35ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"error","message":"POST /api/auth/login — 400 [2ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"Auth: New user registered — me_1780459055869@test.com","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"POST /api/auth/register — 201 [160ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"Auth: User logged in — me_1780459055869@test.com","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"POST /api/auth/login — 200 [115ms]","timestamp":"2026-06-03 15:57:39"}
+{"level":"info","message":"Auth: me_1780459055869@test.com (user) authenticated","timestamp":"2026-06-03 15:57:40"}
+{"level":"info","message":"GET /api/auth/me — 200 [69ms]","timestamp":"2026-06-03 15:57:40"}
+{"level":"error","message":"GET /api/auth/me — 401 [1ms]","timestamp":"2026-06-03 15:57:40"}
+{"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 15:57:40"}
+{"level":"error","message":"GET /api/auth/me — 401 [15ms]","timestamp":"2026-06-03 15:57:40"}

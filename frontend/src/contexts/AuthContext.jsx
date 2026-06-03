@@ -39,6 +39,7 @@ export const AuthProvider = ({ children }) => {
     const res = await api.post('/auth/register', formData);
     const { token, user: userData } = res.data;
     localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(userData));
     api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     setUser(userData);
     return userData;

@@ -7,19 +7,52 @@ const logger = require('../utils/logger');
 
 // POST /api/properties
 const createProperty = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) return res.status(400).json({ success: false, errors: errors.array() });
-
   try {
-    const property = await Property.create({ ...req.body, owner: req.user.id });
+    const { title, description, address, city, rentPerWeek, bedrooms, bathrooms, propertyType, amenities } = req.body;
+
+    // Manual validation
+    if (!title || !title.trim()) {
+      return res.status(400).json({ success: false, message: 'Title is required.' });
+    }
+    if (!description || !description.trim()) {
+      return res.status(400).json({ success: false, message: 'Description is required.' });
+    }
+    if (!address || !address.trim()) {
+      return res.status(400).json({ success: false, message: 'Address is required.' });
+    }
+    if (!city || !city.trim()) {
+      return res.status(400).json({ success: false, message: 'City is required.' });
+    }
+    if (!rentPerWeek || isNaN(rentPerWeek) || Number(rentPerWeek) <= 0) {
+      return res.status(400).json({ success: false, message: 'Valid rent per week is required.' });
+    }
+    if (!bedrooms || Number(bedrooms) < 1) {
+      return res.status(400).json({ success: false, message: 'At least 1 bedroom required.' });
+    }
+    if (!bathrooms || Number(bathrooms) < 1) {
+      return res.status(400).json({ success: false, message: 'At least 1 bathroom required.' });
+    }
+
+    const property = await Property.create({
+      title: title.trim(),
+      description: description.trim(),
+      address: address.trim(),
+      city: city.trim(),
+      rentPerWeek: Number(rentPerWeek),
+      bedrooms: Number(bedrooms),
+      bathrooms: Number(bathrooms),
+      propertyType: propertyType || 'house',
+      amenities: amenities || [],
+      owner: req.user.id,
+    });
+
     logger.info(`Property: Created "${property.title}" by ${req.user.email}`);
-    res.status(201).json({ success: true, message: 'Property listed!', property });
+    res.status(201).json({ success: true, message: 'Property listed successfully!', property });
   } catch (error) {
     logger.error(`Create Property Error: ${error.message}`);
     res.status(500).json({ success: false, message: 'Server error.' });
   }
 };
-
 // GET /api/properties
 const getAllProperties = async (req, res) => {
   try {

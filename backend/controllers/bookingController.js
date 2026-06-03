@@ -17,10 +17,30 @@ const createBooking = async (req, res) => {
 
     const property = await Property.findById(propertyId).populate('owner', 'name');
     if (!property) return res.status(404).json({ success: false, message: 'Property not found.' });
-    if (property.status !== 'available') return res.status(400).json({ success: false, message: 'Property not available.' });
 
-    const existing = await Booking.findOne({ property: propertyId, tenant: req.user.id, status: 'pending' });
-    if (existing) return res.status(400).json({ success: false, message: 'You already have a pending booking for this property.' });
+    // NEW — Apni khud ki property book nahi kar sakte
+    if (property.owner._id.toString() === req.user.id) {
+      return res.status(400).json({
+        success: false,
+        message: 'You cannot book your own property!'
+      });
+    }
+
+    if (property.status !== 'available') {
+      return res.status(400).json({ success: false, message: 'Property not available.' });
+    }
+
+    const existing = await Booking.findOne({
+      property: propertyId,
+      tenant: req.user.id,
+      status: 'pending'
+    });
+    if (existing) {
+      return res.status(400).json({
+        success: false,
+        message: 'You already have a pending booking for this property.'
+      });
+    }
 
     const booking = await Booking.create({
       property: propertyId,
@@ -31,7 +51,12 @@ const createBooking = async (req, res) => {
     });
 
     // Observer Pattern: Owner ko notify karo
-    await pushService.notifyBookingRequest(property.owner._id, req.user.name, property.title, booking._id);
+    await pushService.notifyBookingRequest(
+      property.owner._id,
+      req.user.name,
+      property.title,
+      booking._id
+    );
 
     logger.info(`Booking: New request by ${req.user.email} for "${property.title}"`);
     res.status(201).json({ success: true, message: 'Booking request sent!', booking });
@@ -41,7 +66,7 @@ const createBooking = async (req, res) => {
   }
 };
 
-// GET /api/bookings/my-bookings (tenant)
+// GET /api/bookings/my-bookings
 const getMyBookings = async (req, res) => {
   try {
     const bookings = await Booking.find({ tenant: req.user.id })
@@ -54,7 +79,7 @@ const getMyBookings = async (req, res) => {
   }
 };
 
-// GET /api/bookings/requests (owner)
+// GET /api/bookings/requests
 const getOwnerBookings = async (req, res) => {
   try {
     const bookings = await Booking.find({ owner: req.user.id })
@@ -92,19 +117,47 @@ const updateBookingStatus = async (req, res) => {
     const isTenant = booking.tenant.toString() === req.user.id;
     const isAdmin = req.user.role === 'admin';
 
-    if (!isOwner && !isTenant && !isAdmin) return res.status(403).json({ success: false, message: 'Not authorized.' });
-    if (isTenant && status !== 'cancelled') return res.status(400).json({ success: false, message: 'Tenants can only cancel.' });
-    if (isOwner && !['approved', 'rejected'].includes(status)) return res.status(400).json({ success: false, message: 'Owners can only approve or reject.' });
+    if (!isOwner && !isTenant && !isAdmin) {
+      return res.status(403).json({ success: false, message: 'Not authorized.' });
+    }
+
+    // Tenant sirf cancel kar sakta hai
+    if (isTenant && !isOwner && status !== 'cancelled') {
+      return res.status(400).json({
+        success: false,
+        message: 'You can only cancel your own bookings.'
+      });
+    }
+
+    // Owner sirf approve ya reject kar sakta hai
+    if (isOwner && !isTenant && !['approved', 'rejected'].includes(status)) {
+      return res.status(400).json({
+        success: false,
+        message: 'You can only approve or reject booking requests.'
+      });
+    }
 
     booking.status = status;
     if (ownerNote) booking.ownerNote = ownerNote;
     await booking.save();
 
-    // Observer Pattern: Tenant ko notify karo
-    if (status === 'approved') await pushService.notifyBookingApproved(booking.tenant, booking.property.title, booking._id);
-    if (status === 'rejected') await pushService.notifyBookingRejected(booking.tenant, booking.property.title, booking._id);
+    // Observer Pattern: Notify karo
+    if (status === 'approved') {
+      await pushService.notifyBookingApproved(
+        booking.tenant,
+        booking.property.title,
+        booking._id
+      );
+    }
+    if (status === 'rejected') {
+      await pushService.notifyBookingRejected(
+        booking.tenant,
+        booking.property.title,
+        booking._id
+      );
+    }
 
-    logger.info(`Booking: Status updated to "${status}"`);
+    logger.info(`Booking: Status updated to "${status}" by ${req.user.email}`);
     res.status(200).json({ success: true, message: `Booking ${status}!`, booking });
   } catch (error) {
     logger.error(`Update Booking Error: ${error.message}`);
@@ -117,13 +170,24 @@ const deleteBooking = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
     if (!booking) return res.status(404).json({ success: false, message: 'Booking not found.' });
-    if (booking.tenant.toString() !== req.user.id && req.user.role !== 'admin') return res.status(403).json({ success: false, message: 'Not authorized.' });
+
+    if (booking.tenant.toString() !== req.user.id && req.user.role !== 'admin') {
+      return res.status(403).json({ success: false, message: 'Not authorized.' });
+    }
 
     await Booking.findByIdAndDelete(req.params.id);
+    logger.info(`Booking: Deleted by ${req.user.email}`);
     res.status(200).json({ success: true, message: 'Booking deleted.' });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Server error.' });
   }
 };
 
-module.exports = { createBooking, getMyBookings, getOwnerBookings, getAllBookings, updateBookingStatus, deleteBooking };
+module.exports = {
+  createBooking,
+  getMyBookings,
+  getOwnerBookings,
+  getAllBookings,
+  updateBookingStatus,
+  deleteBooking
+};

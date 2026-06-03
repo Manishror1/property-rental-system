@@ -34,13 +34,11 @@ const Login = () => {
       setErrors(validationErrors);
       return;
     }
-
     setLoading(true);
     try {
       const user = await login(formData.email, formData.password);
-      if (user.role === 'tenant') navigate('/tenant');
-      else if (user.role === 'owner') navigate('/owner');
-      else if (user.role === 'admin') navigate('/admin');
+      if (user.role === 'admin') navigate('/admin');
+      else navigate('/dashboard');
     } catch (error) {
       setApiError(error.response?.data?.message || 'Login failed. Please try again.');
     } finally {
@@ -49,12 +47,12 @@ const Login = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', background: '#f3f4f6' }}>
       <div className="card" style={{ width: '100%', maxWidth: '420px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
           <div style={{ fontSize: '48px' }}>🏠</div>
           <h2 style={{ fontSize: '24px', fontWeight: '700', marginTop: '8px' }}>Welcome Back</h2>
-          <p style={{ color: '#6b7280', fontSize: '14px' }}>Login to your account</p>
+          <p style={{ color: '#6b7280', fontSize: '14px', marginTop: '4px' }}>Login to your account</p>
         </div>
 
         {apiError && <div className="alert alert-error">{apiError}</div>}
@@ -84,14 +82,19 @@ const Login = () => {
             {errors.password && <p className="error-text">{errors.password}</p>}
           </div>
 
-          <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '12px' }} disabled={loading}>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{ width: '100%', padding: '12px', marginTop: '8px' }}
+            disabled={loading}
+          >
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
 
         <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px', color: '#6b7280' }}>
           Don't have an account?{' '}
-          <Link to="/register" style={{ color: '#1a56db', fontWeight: '600' }}>Register here</Link>
+          <Link to="/register" style={{ color: '#7c3aed', fontWeight: '600' }}>Register here</Link>
         </p>
       </div>
     </div>

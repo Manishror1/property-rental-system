@@ -6,8 +6,17 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 
   if (loading) {
     return (
-      <div style={{ display:'flex', justifyContent:'center', alignItems:'center', height:'100vh' }}>
-        <p>Loading...</p>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        background: '#f3f4f6'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏠</div>
+          <p style={{ color: '#6b7280' }}>Loading...</p>
+        </div>
       </div>
     );
   }

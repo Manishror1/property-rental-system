@@ -8,7 +8,11 @@ const Register = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: '', email: '', password: '', role: 'tenant', phone: ''
+    name: '',
+    email: '',
+    password: '',
+    role: 'user',
+    phone: ''
   });
   const [errors, setErrors] = useState({});
   const [apiError, setApiError] = useState('');
@@ -28,7 +32,6 @@ const Register = () => {
     if (nameErr) newErrors.name = nameErr;
     if (emailErr) newErrors.email = emailErr;
     if (passErr) newErrors.password = passErr;
-    if (!formData.role) newErrors.role = 'Please select a role';
     return newErrors;
   };
 
@@ -39,13 +42,11 @@ const Register = () => {
       setErrors(validationErrors);
       return;
     }
-
     setLoading(true);
     try {
       const user = await register(formData);
-      if (user.role === 'tenant') navigate('/tenant');
-      else if (user.role === 'owner') navigate('/owner');
-      else if (user.role === 'admin') navigate('/admin');
+      if (user.role === 'admin') navigate('/admin');
+      else navigate('/dashboard');
     } catch (error) {
       setApiError(error.response?.data?.message || 'Registration failed.');
     } finally {
@@ -54,12 +55,12 @@ const Register = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
-      <div className="card" style={{ width: '100%', maxWidth: '480px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', background: '#f3f4f6' }}>
+      <div className="card" style={{ width: '100%', maxWidth: '460px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
           <div style={{ fontSize: '48px' }}>🏠</div>
           <h2 style={{ fontSize: '24px', fontWeight: '700', marginTop: '8px' }}>Create Account</h2>
-          <p style={{ color: '#6b7280', fontSize: '14px' }}>Join Property Rental System</p>
+          <p style={{ color: '#6b7280', fontSize: '14px', marginTop: '4px' }}>Join Property Rental System</p>
         </div>
 
         {apiError && <div className="alert alert-error">{apiError}</div>}
@@ -67,44 +68,64 @@ const Register = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Full Name</label>
-            <input type="text" name="name" placeholder="Enter your full name" value={formData.name} onChange={handleChange} />
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your full name"
+              value={formData.name}
+              onChange={handleChange}
+            />
             {errors.name && <p className="error-text">{errors.name}</p>}
           </div>
 
           <div className="form-group">
             <label>Email Address</label>
-            <input type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+            />
             {errors.email && <p className="error-text">{errors.email}</p>}
           </div>
 
           <div className="form-group">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Min 6 characters" value={formData.password} onChange={handleChange} />
+            <input
+              type="password"
+              name="password"
+              placeholder="Minimum 6 characters"
+              value={formData.password}
+              onChange={handleChange}
+            />
             {errors.password && <p className="error-text">{errors.password}</p>}
           </div>
 
           <div className="form-group">
             <label>Phone (Optional)</label>
-            <input type="text" name="phone" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Your phone number"
+              value={formData.phone}
+              onChange={handleChange}
+            />
           </div>
 
-          <div className="form-group">
-            <label>I am a</label>
-            <select name="role" value={formData.role} onChange={handleChange}>
-              <option value="tenant">Tenant — Looking for a property</option>
-              <option value="owner">Property Owner — Listing properties</option>
-            </select>
-            {errors.role && <p className="error-text">{errors.role}</p>}
-          </div>
-
-          <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '12px' }} disabled={loading}>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{ width: '100%', padding: '12px', marginTop: '8px' }}
+            disabled={loading}
+          >
             {loading ? 'Creating Account...' : 'Create Account'}
           </button>
         </form>
 
         <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px', color: '#6b7280' }}>
           Already have an account?{' '}
-          <Link to="/login" style={{ color: '#1a56db', fontWeight: '600' }}>Login here</Link>
+          <Link to="/login" style={{ color: '#7c3aed', fontWeight: '600' }}>Login here</Link>
         </p>
       </div>
     </div>

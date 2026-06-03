@@ -2,7 +2,6 @@ const request = require('supertest');
 const mongoose = require('mongoose');
 
 require('dotenv').config();
-
 const app = require('../server');
 
 beforeAll(async () => {
@@ -20,33 +19,32 @@ describe('AUTH TESTS', () => {
 
   describe('POST /api/auth/register', () => {
 
-    it('should register a new tenant successfully', async () => {
+    it('should register a new user successfully', async () => {
       const res = await request(app)
         .post('/api/auth/register')
         .send({
-          name: 'Test Tenant',
-          email: `tenant_${Date.now()}@test.com`,
+          name: 'Test User',
+          email: `user_${Date.now()}@test.com`,
           password: 'test123456',
-          role: 'tenant',
+          role: 'user',
         });
       expect(res.statusCode).toBe(201);
       expect(res.body.success).toBe(true);
       expect(res.body.token).toBeDefined();
-      expect(res.body.user.role).toBe('tenant');
+      expect(res.body.user.role).toBe('user');
     });
 
-    it('should register a new owner successfully', async () => {
+    it('should register admin successfully', async () => {
       const res = await request(app)
         .post('/api/auth/register')
         .send({
-          name: 'Test Owner',
-          email: `owner_${Date.now()}@test.com`,
+          name: 'Test Admin',
+          email: `admin_${Date.now()}@test.com`,
           password: 'test123456',
-          role: 'owner',
+          role: 'admin',
         });
       expect(res.statusCode).toBe(201);
-      expect(res.body.success).toBe(true);
-      expect(res.body.user.role).toBe('owner');
+      expect(res.body.user.role).toBe('admin');
     });
 
     it('should NOT register with invalid email', async () => {
@@ -56,7 +54,7 @@ describe('AUTH TESTS', () => {
           name: 'Bad User',
           email: 'not-valid-email',
           password: 'test123456',
-          role: 'tenant',
+          role: 'user',
         });
       expect(res.statusCode).toBe(400);
       expect(res.body.success).toBe(false);
@@ -67,9 +65,9 @@ describe('AUTH TESTS', () => {
         .post('/api/auth/register')
         .send({
           name: 'Test User',
-          email: 'shortpass@test.com',
+          email: 'short@test.com',
           password: '123',
-          role: 'tenant',
+          role: 'user',
         });
       expect(res.statusCode).toBe(400);
       expect(res.body.success).toBe(false);
@@ -78,10 +76,10 @@ describe('AUTH TESTS', () => {
     it('should NOT register with duplicate email', async () => {
       const email = `dup_${Date.now()}@test.com`;
       await request(app).post('/api/auth/register').send({
-        name: 'First', email, password: 'test123456', role: 'tenant',
+        name: 'First', email, password: 'test123456', role: 'user',
       });
       const res = await request(app).post('/api/auth/register').send({
-        name: 'Second', email, password: 'test123456', role: 'tenant',
+        name: 'Second', email, password: 'test123456', role: 'user',
       });
       expect(res.statusCode).toBe(400);
       expect(res.body.message).toBe('Email already registered.');
@@ -94,7 +92,10 @@ describe('AUTH TESTS', () => {
 
     beforeAll(async () => {
       await request(app).post('/api/auth/register').send({
-        name: 'Login Tester', email: testEmail, password: 'test123456', role: 'tenant',
+        name: 'Login Tester',
+        email: testEmail,
+        password: 'test123456',
+        role: 'user',
       });
     });
 
@@ -138,7 +139,7 @@ describe('AUTH TESTS', () => {
 
     beforeAll(async () => {
       await request(app).post('/api/auth/register').send({
-        name: 'Me Tester', email: testEmail, password: 'test123456', role: 'tenant',
+        name: 'Me Tester', email: testEmail, password: 'test123456', role: 'user',
       });
       const res = await request(app).post('/api/auth/login').send({
         email: testEmail, password: 'test123456',

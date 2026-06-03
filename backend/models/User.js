@@ -1,4 +1,3 @@
-// models/User.js
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
@@ -22,26 +21,24 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
     minlength: [6, 'Password min 6 characters'],
-    select: false, // Password kabhi response me nahi aayega
+    select: false,
   },
   role: {
     type: String,
-    enum: ['tenant', 'owner', 'admin'],
-    default: 'tenant',
+    enum: ['user', 'admin'],  // CHANGED
+    default: 'user',          // CHANGED
   },
   phone: { type: String, trim: true },
-  pushSubscription: { type: Object, default: null }, // Web Push ke liye
+  pushSubscription: { type: Object, default: null },
   isActive: { type: Boolean, default: true },
 }, { timestamps: true });
 
-// Password hash karo save karne se pehle
 UserSchema.pre('save', async function () {
   if (!this.isModified('password')) return;
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-// Password compare method
 UserSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };

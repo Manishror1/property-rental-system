@@ -27,7 +27,7 @@ const register = async (req, res) => {
     if (!password || password.length < 6) {
       return res.status(400).json({ success: false, message: 'Password min 6 characters.' });
     }
-    if (role && !['tenant', 'owner', 'admin'].includes(role)) {
+    if (role && !['user', 'admin'].includes(role)) {
       return res.status(400).json({ success: false, message: 'Invalid role.' });
     }
 
@@ -36,13 +36,13 @@ const register = async (req, res) => {
       return res.status(400).json({ success: false, message: 'Email already registered.' });
     }
 
-    const user = await User.create({
-      name: name.trim(),
-      email: email.toLowerCase(),
-      password,
-      role: role || 'tenant',
-      phone,
-    });
+    const user = await User.create({ 
+         name, 
+         email, 
+         password, 
+         role: role || 'user',  // ← YE HONA CHAHIYE
+         phone
+        });
 
     const token = generateToken(user._id);
     logger.info(`Auth: New user registered — ${email}`);
