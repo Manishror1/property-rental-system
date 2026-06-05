@@ -802,3 +802,154 @@
 {"level":"error","message":"GET /api/auth/me — 401 [1ms]","timestamp":"2026-06-03 15:57:40"}
 {"level":"error","message":"Auth Error: jwt malformed","timestamp":"2026-06-03 15:57:40"}
 {"level":"error","message":"GET /api/auth/me — 401 [15ms]","timestamp":"2026-06-03 15:57:40"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-02.tfwkbbt.mongodb.net","timestamp":"2026-06-03 15:57:58"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-03 15:57:58"}
+{"level":"info","message":"Auth: User logged in — sarah@test.com","timestamp":"2026-06-03 15:58:02"}
+{"level":"info","message":"POST /api/auth/login — 200 [148ms]","timestamp":"2026-06-03 15:58:02"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [99ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [99ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [81ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [90ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/notifications — 304 [332ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [378ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/notifications — 304 [86ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [137ms]","timestamp":"2026-06-03 15:58:03"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"Property: Created \"Cozy 2 Bedroom Apartment Wellington CBD\" by sarah@test.com","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"POST /api/properties — 201 [80ms]","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [61ms]","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [60ms]","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"GET /api/notifications — 304 [61ms]","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [95ms]","timestamp":"2026-06-03 16:00:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/auth/me — 200 [65ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/auth/me — 304 [69ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [62ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [64ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/notifications — 304 [75ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [95ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [62ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [64ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/notifications — 304 [67ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [96ms]","timestamp":"2026-06-03 16:00:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"Property: Created \"Spacious 4 Bedroom Family Home Christchurch\" by sarah@test.com","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"POST /api/properties — 201 [107ms]","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [63ms]","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [68ms]","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"GET /api/notifications — 304 [68ms]","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [93ms]","timestamp":"2026-06-03 16:02:22"}
+{"level":"info","message":"GET /api/properties — 200 [76ms]","timestamp":"2026-06-03 16:02:28"}
+{"level":"info","message":"GET /api/properties — 304 [64ms]","timestamp":"2026-06-03 16:02:28"}
+{"level":"info","message":"GET /api/properties/6a1fa6c83c7a3b9f7278441a — 200 [87ms]","timestamp":"2026-06-03 16:02:32"}
+{"level":"info","message":"GET /api/properties/6a1fa6c83c7a3b9f7278441a — 304 [70ms]","timestamp":"2026-06-03 16:02:32"}
+{"level":"info","message":"GET /api/properties — 304 [121ms]","timestamp":"2026-06-03 16:02:46"}
+{"level":"info","message":"GET /api/properties — 304 [122ms]","timestamp":"2026-06-03 16:02:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [108ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [113ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/notifications — 304 [122ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [158ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [96ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [112ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/notifications — 304 [109ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [118ms]","timestamp":"2026-06-03 16:03:08"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:58"}
+{"level":"info","message":"GET /api/auth/me — 304 [331ms]","timestamp":"2026-06-04 10:34:58"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:58"}
+{"level":"info","message":"GET /api/auth/me — 304 [78ms]","timestamp":"2026-06-04 10:34:58"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/notifications — 304 [167ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [248ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/notifications — 304 [108ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [328ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [352ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [71ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [75ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [366ms]","timestamp":"2026-06-04 10:34:59"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-05 20:18:29"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-05 20:18:29"}
+{"level":"info","message":"GET /api/properties — 304 [132ms]","timestamp":"2026-06-05 20:20:03"}
+{"level":"info","message":"GET /api/properties — 304 [77ms]","timestamp":"2026-06-05 20:20:03"}
+{"level":"info","message":"GET /api/properties — 304 [84ms]","timestamp":"2026-06-05 20:20:19"}
+{"level":"info","message":"GET /api/properties — 304 [71ms]","timestamp":"2026-06-05 20:20:19"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 304 [167ms]","timestamp":"2026-06-05 20:32:49"}
+{"level":"info","message":"GET /api/properties/6a1f98e023029fd5d1b31297 — 304 [81ms]","timestamp":"2026-06-05 20:32:49"}
+{"level":"info","message":"Auth: User logged in — sarah@test.com","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"POST /api/auth/login — 200 [401ms]","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [169ms]","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"GET /api/notifications — 304 [174ms]","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [86ms]","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"GET /api/notifications — 304 [84ms]","timestamp":"2026-06-05 20:36:01"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [656ms]","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [648ms]","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [80ms]","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [129ms]","timestamp":"2026-06-05 20:36:02"}
+{"level":"info","message":"GET /api/properties — 304 [69ms]","timestamp":"2026-06-05 20:36:11"}
+{"level":"info","message":"GET /api/properties — 304 [68ms]","timestamp":"2026-06-05 20:36:11"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [88ms]","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [78ms]","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"GET /api/notifications — 304 [87ms]","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [142ms]","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:13"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [85ms]","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [84ms]","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"GET /api/notifications — 304 [74ms]","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [105ms]","timestamp":"2026-06-05 20:36:14"}
+{"level":"info","message":"GET /api/notifications/vapid-key — 304 [3ms]","timestamp":"2026-06-05 20:37:01"}
+{"level":"info","message":"GET /api/notifications/vapid-key — 304 [1ms]","timestamp":"2026-06-05 20:37:02"}
+{"level":"info","message":"GET /api/notifications/vapid-key — 304 [1ms]","timestamp":"2026-06-05 20:37:03"}
