@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
 import ProfileTab from '../components/ProfileTab';
+import SettingsTab from '../components/SettingsTab';
 import PropertyList from './PropertyList';
 import EmbeddedPropertyDetail from '../components/EmbeddedPropertyDetail';
+import ChatTab from '../components/ChatTab';
+import PropertyCard from '../components/PropertyCard';
 
 const AdminDashboard = () => {
   const { user } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const initialTab = location.state?.tab || 'dashboard';
   const [activeTab, setActiveTab] = useState(initialTab);
@@ -19,20 +23,26 @@ const AdminDashboard = () => {
   const [bookings, setBookings] = useState([]);
   const [properties, setProperties] = useState([]);
   const [notifications, setNotifications] = useState([]);
+  const [savedProperties, setSavedProperties] = useState([]);
+  const [unreadMessages, setUnreadMessages] = useState(0);
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     try {
-      const [statsRes, usersRes, bookingsRes, notifsRes] = await Promise.all([
+      const [statsRes, usersRes, bookingsRes, notifsRes, wishlistRes, msgRes] = await Promise.all([
         api.get('/admin/stats'),
         api.get('/admin/users'),
         api.get('/bookings'),
         api.get('/notifications'),
+        api.get('/auth/wishlist'),
+        api.get('/messages/unread-count'),
       ]);
       setStats(statsRes.data.stats);
       setUsers(usersRes.data.users);
       setBookings(bookingsRes.data.bookings);
       setNotifications(notifsRes.data.notifications);
+      setSavedProperties(wishlistRes.data.savedProperties || []);
+      setUnreadMessages(msgRes.data.count || 0);
 
       const [availRes, rentedRes, unavailRes] = await Promise.all([
         api.get('/properties?status=available'),
@@ -62,14 +72,16 @@ const AdminDashboard = () => {
   const pendingUsers = users.filter(u => !u.isActive).length;
   const unreadNotifs = notifications.filter(n => !n.isRead).length;
 
+  const savedPropertyIds = savedProperties.map(p =>
+    typeof p === 'object' ? p._id?.toString() : p?.toString()
+  );
+
   const tabs = [
     { id: 'dashboard', label: '📊 Overview' },
     { id: 'users', label: `👥 Users${pendingUsers > 0 ? ` (${pendingUsers})` : ''}` },
     { id: 'properties', label: `🏠 Properties (${properties.length})` },
     { id: 'bookings', label: `📋 Bookings (${bookings.length})` },
     { id: 'browse', label: '🔍 Browse' },
-    { id: 'notifications', label: `🔔 Notifications${unreadNotifs > 0 ? ` (${unreadNotifs})` : ''}` },
-    { id: 'profile', label: '👤 Profile' },
   ];
 
   const handleToggleUser = async (userId) => {
@@ -115,6 +127,17 @@ const AdminDashboard = () => {
     return map[status] || 'badge-gray';
   };
 
+  const getNotifIcon = (type) => {
+    const icons = {
+      booking_request: '🏠', booking_approved: '✅',
+      booking_rejected: '❌', booking_cancelled: '🚫',
+      security: '🔒', account: '👤',
+      message: '💬', welcome: '🎉',
+      test: '🧪', general: '🔔'
+    };
+    return icons[type] || '🔔';
+  };
+
   return (
     <div style={{ background: '#f3f4f6', minHeight: 'calc(100vh - 64px)' }}>
 
@@ -122,32 +145,27 @@ const AdminDashboard = () => {
       <div style={{ background: '#0f172a', padding: '20px 32px 0' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
-          {/* Header Top */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
             <div>
               <h1 style={{ fontSize: '20px', fontWeight: '700', color: 'white', marginBottom: '2px' }}>
-                ⚙️ Admin Dashboard
+                {activeTab === 'dashboard' && '⚙️ Admin Dashboard'}
+                {activeTab === 'users' && '👥 User Management'}
+                {activeTab === 'properties' && '🏠 Property Management'}
+                {activeTab === 'bookings' && '📋 All Bookings'}
+                {activeTab === 'browse' && '🔍 Browse Properties'}
+                {activeTab === 'saved' && '❤️ Saved Properties'}
+                {activeTab === 'messages' && '💬 Messages'}
+                {activeTab === 'notifications' && '🔔 Notifications'}
+                {activeTab === 'profile' && '👤 Admin Profile'}
+                {activeTab === 'settings' && '⚙️ Settings'}
               </h1>
               <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>
                 Property Booking and Rental System
               </p>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{
-                width: '36px', height: '36px', borderRadius: '50%',
-                background: '#7c3aed', display: 'flex', alignItems: 'center',
-                justifyContent: 'center', color: 'white', fontSize: '14px', fontWeight: '700'
-              }}>
-                {user?.name?.charAt(0).toUpperCase()}
-              </div>
-              <div>
-                <p style={{ fontSize: '13px', fontWeight: '600', color: 'white' }}>{user?.name}</p>
-                <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>Administrator</p>
-              </div>
-            </div>
           </div>
 
-          {/* Tab Navigation */}
+          {/* Tabs */}
           <div style={{ display: 'flex', gap: '4px', overflowX: 'auto' }}>
             {tabs.map(tab => (
               <button
@@ -171,51 +189,37 @@ const AdminDashboard = () => {
       {/* Content */}
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '24px 32px' }}>
 
-        {/* ── DASHBOARD TAB ─────────────────────────────── */}
+        {/* DASHBOARD TAB */}
         {activeTab === 'dashboard' && (
           <>
-            {/* Stats Row */}
             <div className="stats-row">
               <div className="stat-box">
-                <div className="stat-box-info">
-                  <h3>Total Users</h3>
-                  <div className="num">{stats.totalUsers || 0}</div>
-                </div>
+                <div className="stat-box-info"><h3>Total Users</h3>
+                  <div className="num">{stats.totalUsers || 0}</div></div>
                 <div className="stat-box-icon" style={{ background: '#ede9fe' }}>👥</div>
               </div>
               <div className="stat-box">
-                <div className="stat-box-info">
-                  <h3>Total Properties</h3>
-                  <div className="num" style={{ color: '#057a55' }}>{stats.totalProperties || 0}</div>
-                </div>
+                <div className="stat-box-info"><h3>Total Properties</h3>
+                  <div className="num" style={{ color: '#057a55' }}>{stats.totalProperties || 0}</div></div>
                 <div className="stat-box-icon" style={{ background: '#dcfce7' }}>🏠</div>
               </div>
               <div className="stat-box">
-                <div className="stat-box-info">
-                  <h3>Total Bookings</h3>
-                  <div className="num" style={{ color: '#7c3aed' }}>{stats.totalBookings || 0}</div>
-                </div>
+                <div className="stat-box-info"><h3>Total Bookings</h3>
+                  <div className="num" style={{ color: '#7c3aed' }}>{stats.totalBookings || 0}</div></div>
                 <div className="stat-box-icon" style={{ background: '#ede9fe' }}>📋</div>
               </div>
               <div className="stat-box">
-                <div className="stat-box-info">
-                  <h3>Pending Bookings</h3>
-                  <div className="num" style={{ color: '#c27803' }}>{stats.pendingBookings || 0}</div>
-                </div>
+                <div className="stat-box-info"><h3>Pending Bookings</h3>
+                  <div className="num" style={{ color: '#c27803' }}>{stats.pendingBookings || 0}</div></div>
                 <div className="stat-box-icon" style={{ background: '#fdf6b2' }}>⏳</div>
               </div>
             </div>
 
-            {/* 2 Column Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-
-              {/* Users by Role */}
               <div className="card">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                   <h2 className="section-title" style={{ marginBottom: 0 }}>Users by Role</h2>
-                  {pendingUsers > 0 && (
-                    <span className="badge badge-yellow">{pendingUsers} suspended</span>
-                  )}
+                  {pendingUsers > 0 && <span className="badge badge-yellow">{pendingUsers} suspended</span>}
                 </div>
                 {[
                   { role: 'user', label: 'Regular Users', color: '#7c3aed', bg: '#ede9fe' },
@@ -248,7 +252,6 @@ const AdminDashboard = () => {
                 </div>
               </div>
 
-              {/* Booking Status */}
               <div className="card">
                 <h2 className="section-title">Booking Status Overview</h2>
                 {[
@@ -274,7 +277,6 @@ const AdminDashboard = () => {
               </div>
             </div>
 
-            {/* Properties Overview */}
             <div className="card" style={{ marginTop: '20px' }}>
               <h2 className="section-title" style={{ marginBottom: '14px' }}>Properties Overview</h2>
               <div style={{ display: 'flex', gap: '16px' }}>
@@ -294,7 +296,7 @@ const AdminDashboard = () => {
           </>
         )}
 
-        {/* ── USERS TAB ─────────────────────────────────── */}
+        {/* USERS TAB */}
         {activeTab === 'users' && (
           <div className="card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
@@ -309,14 +311,7 @@ const AdminDashboard = () => {
               <div style={{ overflowX: 'auto' }}>
                 <table>
                   <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Role</th>
-                      <th>Status</th>
-                      <th>Joined</th>
-                      <th>Action</th>
-                    </tr>
+                    <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Joined</th><th>Action</th></tr>
                   </thead>
                   <tbody>
                     {users.map((u) => (
@@ -362,7 +357,7 @@ const AdminDashboard = () => {
           </div>
         )}
 
-        {/* ── PROPERTIES TAB ────────────────────────────── */}
+        {/* PROPERTIES TAB */}
         {activeTab === 'properties' && (
           <div className="card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
@@ -380,14 +375,7 @@ const AdminDashboard = () => {
                 <div style={{ overflowX: 'auto' }}>
                   <table>
                     <thead>
-                      <tr>
-                        <th>Property</th>
-                        <th>Owner</th>
-                        <th>Location</th>
-                        <th>Rent/Week</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
+                      <tr><th>Property</th><th>Owner</th><th>Location</th><th>Rent/Week</th><th>Status</th><th>Action</th></tr>
                     </thead>
                     <tbody>
                       {properties.map((p) => (
@@ -414,9 +402,7 @@ const AdminDashboard = () => {
                           <td><span className={`badge ${getStatusBadge(p.status)}`}>{p.status}</span></td>
                           <td>
                             <button onClick={() => handleDeleteProperty(p._id)}
-                              className="btn btn-danger btn-sm">
-                              🗑 Remove
-                            </button>
+                              className="btn btn-danger btn-sm">🗑 Remove</button>
                           </td>
                         </tr>
                       ))}
@@ -427,7 +413,7 @@ const AdminDashboard = () => {
           </div>
         )}
 
-        {/* ── BOOKINGS TAB ──────────────────────────────── */}
+        {/* BOOKINGS TAB */}
         {activeTab === 'bookings' && (
           <div className="card">
             <div style={{ marginBottom: '16px' }}>
@@ -441,14 +427,7 @@ const AdminDashboard = () => {
                 <div style={{ overflowX: 'auto' }}>
                   <table>
                     <thead>
-                      <tr>
-                        <th>Property</th>
-                        <th>Tenant</th>
-                        <th>Owner</th>
-                        <th>Preferred Date</th>
-                        <th>Status</th>
-                        <th>Created</th>
-                      </tr>
+                      <tr><th>Property</th><th>Tenant</th><th>Owner</th><th>Preferred Date</th><th>Status</th><th>Created</th></tr>
                     </thead>
                     <tbody>
                       {bookings.map((b) => (
@@ -473,7 +452,7 @@ const AdminDashboard = () => {
           </div>
         )}
 
-        {/* ── BROWSE TAB ────────────────────────────────── */}
+        {/* BROWSE TAB */}
         {activeTab === 'browse' && (
           selectedPropertyId ? (
             <EmbeddedPropertyDetail
@@ -484,11 +463,57 @@ const AdminDashboard = () => {
             <PropertyList
               embedded={true}
               onViewProperty={(property) => setSelectedPropertyId(property._id)}
+              savedIds={savedPropertyIds}
             />
           )
         )}
 
-        {/* ── NOTIFICATIONS TAB ─────────────────────────── */}
+        {/* SAVED PROPERTIES TAB */}
+        {activeTab === 'saved' && (
+          <div>
+            {savedProperties.length === 0 ? (
+              <div className="empty-state" style={{ padding: '60px 20px' }}>
+                <div style={{ fontSize: '48px', marginBottom: '12px' }}>🤍</div>
+                <h3>No saved properties yet</h3>
+                <p style={{ color: '#6b7280', marginTop: '8px' }}>
+                  Click the ❤️ icon on any property to save it here.
+                </p>
+                <button onClick={() => setActiveTab('browse')}
+                  className="btn btn-primary" style={{ marginTop: '16px' }}>
+                  Browse Properties
+                </button>
+              </div>
+            ) : (
+              <>
+                <p style={{ marginBottom: '16px', color: '#6b7280', fontSize: '14px' }}>
+                  {savedProperties.length} saved {savedProperties.length === 1 ? 'property' : 'properties'}
+                </p>
+                <div className="grid-3">
+                  {savedProperties.map((property) => (
+                    typeof property === 'object' && property._id ? (
+                      <PropertyCard
+                        key={property._id}
+                        property={property}
+                        savedIds={savedPropertyIds}
+                        onViewDetails={(p) => {
+                          setSelectedPropertyId(p._id);
+                          setActiveTab('browse');
+                        }}
+                      />
+                    ) : null
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
+        {/* MESSAGES TAB */}
+        {activeTab === 'messages' && (
+          <ChatTab />
+        )}
+
+        {/* NOTIFICATIONS TAB */}
         {activeTab === 'notifications' && (
           <div className="card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
@@ -506,27 +531,44 @@ const AdminDashboard = () => {
               )}
             </div>
             {notifications.length === 0 ? (
-              <div className="empty-state"><h3>No notifications yet</h3></div>
+              <div className="empty-state">
+                <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔔</div>
+                <h3>No notifications yet</h3>
+              </div>
             ) : (
               notifications.map((n) => (
                 <div key={n._id} style={{
-                  padding: '14px', borderRadius: '8px', marginBottom: '8px',
+                  display: 'flex', gap: '12px', padding: '14px',
+                  borderRadius: '10px', marginBottom: '8px',
                   background: n.isRead ? '#f9fafb' : '#faf5ff',
                   border: `1px solid ${n.isRead ? '#e5e7eb' : '#ddd6fe'}`,
                 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        {!n.isRead && (
-                          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#7c3aed', flexShrink: 0 }} />
-                        )}
-                        <p style={{ fontWeight: '600', fontSize: '14px' }}>{n.title}</p>
+                  <div style={{
+                    width: '40px', height: '40px', borderRadius: '50%',
+                    background: n.isRead ? '#f3f4f6' : '#ede9fe',
+                    display: 'flex', alignItems: 'center',
+                    justifyContent: 'center', fontSize: '18px', flexShrink: 0
+                  }}>
+                    {getNotifIcon(n.type)}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+                          {!n.isRead && (
+                            <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#7c3aed' }} />
+                          )}
+                          <p style={{ fontWeight: '600', fontSize: '14px', color: '#111827' }}>{n.title}</p>
+                        </div>
+                        <p style={{ color: '#6b7280', fontSize: '13px', lineHeight: '1.5' }}>{n.body}</p>
                       </div>
-                      <p style={{ color: '#6b7280', fontSize: '13px', marginTop: '4px' }}>{n.body}</p>
+                      <span style={{ fontSize: '11px', color: '#9ca3af', whiteSpace: 'nowrap', marginLeft: '12px' }}>
+                        {new Date(n.createdAt).toLocaleDateString('en-NZ', {
+                          day: 'numeric', month: 'short',
+                          hour: '2-digit', minute: '2-digit'
+                        })}
+                      </span>
                     </div>
-                    <span style={{ fontSize: '12px', color: '#9ca3af', whiteSpace: 'nowrap', marginLeft: '12px' }}>
-                      {new Date(n.createdAt).toLocaleDateString()}
-                    </span>
                   </div>
                 </div>
               ))
@@ -534,9 +576,14 @@ const AdminDashboard = () => {
           </div>
         )}
 
-        {/* ── PROFILE TAB ───────────────────────────────── */}
+        {/* PROFILE TAB */}
         {activeTab === 'profile' && (
           <ProfileTab user={user} onUpdate={fetchData} />
+        )}
+
+        {/* SETTINGS TAB */}
+        {activeTab === 'settings' && (
+          <SettingsTab user={user} />
         )}
 
       </div>

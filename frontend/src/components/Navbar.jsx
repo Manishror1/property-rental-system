@@ -11,9 +11,9 @@ const Navbar = () => {
   const [unreadNotif, setUnreadNotif] = useState(0);
   const [savedCount, setSavedCount] = useState(0);
 
-  // Fetch counts for badges
+  // ✅ Both user AND admin ke liye counts fetch karo
   useEffect(() => {
-    if (!user || user.role !== 'user') return;
+    if (!user) return;
     const fetchCounts = async () => {
       try {
         const [msgRes, notifRes, wishlistRes] = await Promise.all([
@@ -29,7 +29,7 @@ const Navbar = () => {
       }
     };
     fetchCounts();
-    const interval = setInterval(fetchCounts, 30000); // refresh every 30s
+    const interval = setInterval(fetchCounts, 30000);
     return () => clearInterval(interval);
   }, [user]);
 
@@ -117,7 +117,7 @@ const Navbar = () => {
                   {user.role}
                 </div>
               </div>
-              {/* Badge on avatar if unread */}
+              {/* Badge — unread count */}
               {totalBadge > 0 && (
                 <div style={{
                   position: 'absolute', top: '4px', right: '36px',
@@ -129,7 +129,9 @@ const Navbar = () => {
                   {totalBadge}
                 </div>
               )}
-              <span style={{ fontSize: '10px', opacity: 0.6 }}>{menuOpen ? '▲' : '▼'}</span>
+              <span style={{ fontSize: '10px', opacity: 0.6 }}>
+                {menuOpen ? '▲' : '▼'}
+              </span>
             </button>
 
             {/* Dropdown */}
@@ -141,7 +143,7 @@ const Navbar = () => {
                 border: '1px solid #e5e7eb', overflow: 'hidden', zIndex: 1000
               }}>
 
-                {/* User Info */}
+                {/* User Info Header */}
                 <div style={{
                   padding: '14px 16px', borderBottom: '1px solid #f3f4f6',
                   background: '#faf5ff'
@@ -155,62 +157,77 @@ const Navbar = () => {
                       {user.name?.charAt(0).toUpperCase()}
                     </div>
                     <div>
-                      <p style={{ fontSize: '13px', fontWeight: '600', color: '#111827' }}>{user.name}</p>
+                      <p style={{ fontSize: '13px', fontWeight: '600', color: '#111827' }}>
+                        {user.name}
+                      </p>
                       <p style={{ fontSize: '11px', color: '#6b7280' }}>{user.email}</p>
                     </div>
                   </div>
                 </div>
 
-                {/* USER links */}
+                {/* ── USER LINKS ── */}
                 {user.role === 'user' && (
                   <>
-                    <DropdownItem icon="📊" label="Dashboard"
-                      onClick={() => { navigate('/dashboard'); setMenuOpen(false); }} />
-
                     <DropdownItem
-                      icon="❤️"
-                      label="Saved Properties"
+                      icon="📊" label="Dashboard"
+                      onClick={() => { navigate('/dashboard'); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="❤️" label="Saved Properties"
                       badge={savedCount}
                       onClick={() => { navigate('/dashboard', { state: { tab: 'saved' } }); setMenuOpen(false); }}
                     />
-
                     <DropdownItem
-                      icon="💬"
-                      label="Messages"
+                      icon="💬" label="Messages"
                       badge={unreadMsg}
                       onClick={() => { navigate('/dashboard', { state: { tab: 'messages' } }); setMenuOpen(false); }}
                     />
-
                     <DropdownItem
-                      icon="🔔"
-                      label="Notifications"
+                      icon="🔔" label="Notifications"
                       badge={unreadNotif}
                       onClick={() => { navigate('/dashboard', { state: { tab: 'notifications' } }); setMenuOpen(false); }}
                     />
-
-                    <DropdownItem icon="👤" label="Profile"
-                      onClick={() => { navigate('/dashboard', { state: { tab: 'profile' } }); setMenuOpen(false); }} />
-
-                    <DropdownItem icon="⚙️" label="Settings"
-                      onClick={() => { navigate('/dashboard', { state: { tab: 'settings' } }); setMenuOpen(false); }} />
+                    <DropdownItem
+                      icon="👤" label="Profile"
+                      onClick={() => { navigate('/dashboard', { state: { tab: 'profile' } }); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="⚙️" label="Settings"
+                      onClick={() => { navigate('/dashboard', { state: { tab: 'settings' } }); setMenuOpen(false); }}
+                    />
                   </>
                 )}
 
-                {/* ADMIN links */}
+                {/* ── ADMIN LINKS — Same structure as user ── */}
                 {user.role === 'admin' && (
                   <>
-                    <DropdownItem icon="⚙️" label="Admin Dashboard"
-                      onClick={() => { navigate('/admin'); setMenuOpen(false); }} />
-                    <DropdownItem icon="👥" label="User Management"
-                      onClick={() => { navigate('/admin', { state: { tab: 'users' } }); setMenuOpen(false); }} />
-                    <DropdownItem icon="🏠" label="Property Management"
-                      onClick={() => { navigate('/admin', { state: { tab: 'properties' } }); setMenuOpen(false); }} />
-                    <DropdownItem icon="📋" label="All Bookings"
-                      onClick={() => { navigate('/admin', { state: { tab: 'bookings' } }); setMenuOpen(false); }} />
-                    <DropdownItem icon="👤" label="Profile"
-                      onClick={() => { navigate('/admin', { state: { tab: 'profile' } }); setMenuOpen(false); }} />
-                    <DropdownItem icon="⚙️" label="Settings"
-                      onClick={() => { navigate('/admin', { state: { tab: 'settings' } }); setMenuOpen(false); }} />
+                    <DropdownItem
+                      icon="📊" label="Admin Dashboard"
+                      onClick={() => { navigate('/admin'); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="❤️" label="Saved Properties"
+                      badge={savedCount}
+                      onClick={() => { navigate('/admin', { state: { tab: 'saved' } }); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="💬" label="Messages"
+                      badge={unreadMsg}
+                      onClick={() => { navigate('/admin', { state: { tab: 'messages' } }); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="🔔" label="Notifications"
+                      badge={unreadNotif}
+                      onClick={() => { navigate('/admin', { state: { tab: 'notifications' } }); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="👤" label="Profile"
+                      onClick={() => { navigate('/admin', { state: { tab: 'profile' } }); setMenuOpen(false); }}
+                    />
+                    <DropdownItem
+                      icon="⚙️" label="Settings"
+                      onClick={() => { navigate('/admin', { state: { tab: 'settings' } }); setMenuOpen(false); }}
+                    />
                   </>
                 )}
 
@@ -237,7 +254,6 @@ const Navbar = () => {
   );
 };
 
-// Helper — Dropdown Item with optional badge
 const DropdownItem = ({ icon, label, onClick, badge }) => (
   <button onClick={onClick} style={{
     width: '100%', padding: '10px 16px', border: 'none',
@@ -255,8 +271,8 @@ const DropdownItem = ({ icon, label, onClick, badge }) => (
     {badge > 0 && (
       <span style={{
         background: '#7c3aed', color: 'white', borderRadius: '10px',
-        fontSize: '11px', fontWeight: '700', padding: '1px 7px', minWidth: '20px',
-        textAlign: 'center'
+        fontSize: '11px', fontWeight: '700', padding: '1px 7px',
+        minWidth: '20px', textAlign: 'center'
       }}>
         {badge}
       </span>

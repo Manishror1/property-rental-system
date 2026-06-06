@@ -5,6 +5,8 @@ const cors = require('cors');
 const db = require('./config/db');
 const requestLogger = require('./middleware/requestLogger');
 const logger = require('./utils/logger');
+const passport = require('./config/passport');
+const session = require('express-session');
 
 const app = express();
 
@@ -16,6 +18,13 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json({ limit: '10mb' }));
+app.use(session({
+  secret: process.env.JWT_SECRET,
+  resave: false,
+  saveUninitialized: false,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 

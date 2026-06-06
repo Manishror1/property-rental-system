@@ -4709,3 +4709,678 @@
 {"level":"info","message":"Auth: bktenant_1780710389866@test.com (user) authenticated","timestamp":"2026-06-06 13:46:36"}
 {"level":"warn","message":"Authorization denied: bktenant_1780710389866@test.com tried restricted route","timestamp":"2026-06-06 13:46:36"}
 {"level":"error","message":"GET /api/bookings — 403 [66ms]","timestamp":"2026-06-06 13:46:36"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-06 17:00:27"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-06 17:00:27"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:37"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:37"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:37"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [102ms]","timestamp":"2026-06-06 17:00:37"}
+{"level":"info","message":"GET /api/notifications — 304 [94ms]","timestamp":"2026-06-06 17:00:37"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [141ms]","timestamp":"2026-06-06 17:00:37"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:38"}
+{"level":"info","message":"GET /api/auth/me — 304 [66ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/auth/me — 304 [72ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [66ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/notifications — 304 [91ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [92ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [135ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [109ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [94ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/notifications — 304 [85ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [75ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [73ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [307ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Conversations fetched for: sarah@test.com","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/messages/conversations — 304 [312ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/notifications — 304 [79ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [70ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [103ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Conversations fetched for: sarah@test.com","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/messages/conversations — 304 [101ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [295ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [302ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [97ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [88ms]","timestamp":"2026-06-06 17:00:39"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/auth/me — 304 [67ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/properties — 200 [71ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/auth/me — 304 [71ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [63ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/notifications — 304 [67ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/properties — 304 [68ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [104ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/notifications — 304 [59ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [67ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [108ms]","timestamp":"2026-06-06 17:00:41"}
+{"level":"info","message":"GET /api/properties — 304 [72ms]","timestamp":"2026-06-06 17:00:54"}
+{"level":"info","message":"GET /api/properties — 304 [65ms]","timestamp":"2026-06-06 17:00:54"}
+{"level":"info","message":"GET /api/properties/6a237bfab2ce35ff6be1d3aa — 200 [70ms]","timestamp":"2026-06-06 17:01:06"}
+{"level":"info","message":"GET /api/properties/6a237bfab2ce35ff6be1d3aa — 304 [62ms]","timestamp":"2026-06-06 17:01:06"}
+{"level":"info","message":"GET /api/properties — 304 [73ms]","timestamp":"2026-06-06 17:01:10"}
+{"level":"info","message":"GET /api/properties — 304 [67ms]","timestamp":"2026-06-06 17:01:10"}
+{"level":"info","message":"Auth: User logged in — manish@test.com (user)","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"POST /api/auth/login — 200 [123ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/messages/unread-count — 200 [68ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/notifications — 200 [66ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/auth/wishlist — 200 [65ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [59ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 200 [72ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/bookings/requests — 200 [99ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [69ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/notifications — 304 [65ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [63ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [71ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [67ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [69ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [86ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/notifications — 304 [90ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [119ms]","timestamp":"2026-06-06 17:01:38"}
+{"level":"info","message":"GET /api/properties — 304 [68ms]","timestamp":"2026-06-06 17:01:47"}
+{"level":"info","message":"GET /api/properties — 304 [67ms]","timestamp":"2026-06-06 17:01:47"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:06"}
+{"level":"info","message":"Conversations fetched for: manish@test.com","timestamp":"2026-06-06 17:02:07"}
+{"level":"info","message":"GET /api/messages/conversations — 200 [102ms]","timestamp":"2026-06-06 17:02:07"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:07"}
+{"level":"info","message":"Conversations fetched for: manish@test.com","timestamp":"2026-06-06 17:02:07"}
+{"level":"info","message":"GET /api/messages/conversations — 304 [107ms]","timestamp":"2026-06-06 17:02:07"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:08"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:08"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:08"}
+{"level":"info","message":"GET /api/notifications — 304 [66ms]","timestamp":"2026-06-06 17:02:08"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [68ms]","timestamp":"2026-06-06 17:02:08"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [76ms]","timestamp":"2026-06-06 17:02:08"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:38"}
+{"level":"info","message":"Auth: manish@test.com (user) authenticated","timestamp":"2026-06-06 17:02:38"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:02:38"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [66ms]","timestamp":"2026-06-06 17:02:38"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:02:38"}
+{"level":"info","message":"Auth: User logged in — admin@test.com (admin)","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"POST /api/auth/login — 200 [108ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/admin/stats — 200 [68ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/notifications — 200 [61ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/admin/users — 200 [76ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/bookings — 200 [109ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/notifications — 304 [73ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/admin/users — 304 [74ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [30ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/properties?status=available — 200 [68ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/bookings — 304 [107ms]","timestamp":"2026-06-06 17:02:58"}
+{"level":"info","message":"GET /api/admin/stats — 304 [463ms]","timestamp":"2026-06-06 17:02:59"}
+{"level":"info","message":"GET /api/properties?status=rented — 200 [432ms]","timestamp":"2026-06-06 17:02:59"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [32ms]","timestamp":"2026-06-06 17:02:59"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [64ms]","timestamp":"2026-06-06 17:02:59"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [69ms]","timestamp":"2026-06-06 17:02:59"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:03:45"}
+{"level":"info","message":"Admin: bkadmin_1780710390192@test.com set to inactive","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"PUT /api/admin/users/6a237bf6b2ce35ff6be1d39d/toggle — 200 [114ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/admin/stats — 304 [66ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/admin/users — 200 [74ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/notifications — 304 [85ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/bookings — 304 [123ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [31ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [66ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [70ms]","timestamp":"2026-06-06 17:03:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"GET /api/admin/stats — 304 [74ms]","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"GET /api/notifications — 304 [68ms]","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"GET /api/admin/users — 304 [86ms]","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"GET /api/bookings — 304 [110ms]","timestamp":"2026-06-06 17:07:06"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [32ms]","timestamp":"2026-06-06 17:07:07"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [60ms]","timestamp":"2026-06-06 17:07:07"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [65ms]","timestamp":"2026-06-06 17:07:07"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/auth/me — 200 [64ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/auth/me — 304 [69ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/admin/stats — 304 [71ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/admin/users — 304 [82ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/notifications — 304 [85ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/bookings — 304 [119ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/admin/stats — 304 [69ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/admin/users — 304 [80ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [34ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [65ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [66ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/bookings — 304 [136ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [33ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [61ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [63ms]","timestamp":"2026-06-06 17:07:17"}
+{"level":"info","message":"GET /api/properties — 304 [64ms]","timestamp":"2026-06-06 17:07:21"}
+{"level":"info","message":"GET /api/properties — 304 [60ms]","timestamp":"2026-06-06 17:07:21"}
+{"level":"info","message":"Auth: User logged in — sarah@test.com (user)","timestamp":"2026-06-06 17:08:24"}
+{"level":"info","message":"POST /api/auth/login — 200 [111ms]","timestamp":"2026-06-06 17:08:24"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/messages/unread-count — 200 [78ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/notifications — 200 [82ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/bookings/requests — 200 [71ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/properties/my-listings — 200 [78ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/auth/wishlist — 200 [121ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 200 [113ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/notifications — 304 [67ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [72ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/properties/my-listings — 304 [75ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/bookings/requests — 304 [79ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [116ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [86ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/bookings/my-bookings — 304 [110ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [93ms]","timestamp":"2026-06-06 17:08:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:08:55"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:08:55"}
+{"level":"info","message":"GET /api/notifications — 304 [72ms]","timestamp":"2026-06-06 17:08:55"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [100ms]","timestamp":"2026-06-06 17:08:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:09:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:09:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:09:25"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [63ms]","timestamp":"2026-06-06 17:09:25"}
+{"level":"info","message":"GET /api/notifications — 304 [68ms]","timestamp":"2026-06-06 17:09:25"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [90ms]","timestamp":"2026-06-06 17:09:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:09:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:09:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:09:55"}
+{"level":"info","message":"GET /api/notifications — 304 [66ms]","timestamp":"2026-06-06 17:09:55"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [72ms]","timestamp":"2026-06-06 17:09:55"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [101ms]","timestamp":"2026-06-06 17:09:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:10:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:10:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:10:25"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:10:25"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [67ms]","timestamp":"2026-06-06 17:10:25"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [99ms]","timestamp":"2026-06-06 17:10:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:10:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:10:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:10:55"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [61ms]","timestamp":"2026-06-06 17:10:55"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:10:55"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [92ms]","timestamp":"2026-06-06 17:10:55"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:11:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:11:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:11:25"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:11:25"}
+{"level":"info","message":"GET /api/notifications — 304 [69ms]","timestamp":"2026-06-06 17:11:25"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [102ms]","timestamp":"2026-06-06 17:11:25"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:12:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:12:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:12:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:12:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:12:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [88ms]","timestamp":"2026-06-06 17:12:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:13:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:13:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:13:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [59ms]","timestamp":"2026-06-06 17:13:46"}
+{"level":"info","message":"GET /api/notifications — 304 [71ms]","timestamp":"2026-06-06 17:13:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [101ms]","timestamp":"2026-06-06 17:13:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:14:47"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:14:47"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:14:47"}
+{"level":"info","message":"GET /api/notifications — 304 [77ms]","timestamp":"2026-06-06 17:14:47"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [80ms]","timestamp":"2026-06-06 17:14:47"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [125ms]","timestamp":"2026-06-06 17:14:47"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:15:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:15:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:15:46"}
+{"level":"info","message":"GET /api/notifications — 304 [68ms]","timestamp":"2026-06-06 17:15:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [70ms]","timestamp":"2026-06-06 17:15:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [103ms]","timestamp":"2026-06-06 17:15:46"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:16:09"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:16:09"}
+{"level":"info","message":"Auth: sarah@test.com (user) authenticated","timestamp":"2026-06-06 17:16:09"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:16:09"}
+{"level":"info","message":"GET /api/notifications — 304 [66ms]","timestamp":"2026-06-06 17:16:09"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [97ms]","timestamp":"2026-06-06 17:16:09"}
+{"level":"info","message":"Auth: User logged in — admin@test.com (admin)","timestamp":"2026-06-06 17:16:25"}
+{"level":"info","message":"POST /api/auth/login — 200 [115ms]","timestamp":"2026-06-06 17:16:25"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [66ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/notifications — 200 [66ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/auth/wishlist — 200 [71ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/admin/stats — 304 [67ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/admin/users — 304 [73ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/bookings — 304 [134ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [99ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/notifications — 304 [96ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [93ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/admin/users — 304 [95ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [113ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/notifications — 304 [115ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [115ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [80ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/bookings — 304 [160ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [65ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [102ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/admin/stats — 304 [410ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [36ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [66ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [69ms]","timestamp":"2026-06-06 17:16:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:56"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:56"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:16:56"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:16:56"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:16:56"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:16:56"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:26"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [58ms]","timestamp":"2026-06-06 17:17:26"}
+{"level":"info","message":"GET /api/notifications — 304 [65ms]","timestamp":"2026-06-06 17:17:26"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:17:26"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/auth/me — 304 [65ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/auth/me — 304 [63ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [63ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/notifications — 304 [71ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/admin/stats — 304 [66ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [73ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/admin/users — 304 [77ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/bookings — 304 [99ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/notifications — 304 [70ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/admin/users — 304 [67ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/admin/stats — 304 [73ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [72ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [78ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/notifications — 304 [77ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/bookings — 304 [108ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [69ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [33ms]","timestamp":"2026-06-06 17:17:36"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [68ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [75ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/properties?status=unavailable — 304 [31ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [71ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/notifications — 304 [60ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [65ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/properties?status=rented — 304 [61ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"GET /api/properties?status=available — 304 [63ms]","timestamp":"2026-06-06 17:17:37"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:43"}
+{"level":"info","message":"Conversations fetched for: admin@test.com","timestamp":"2026-06-06 17:17:43"}
+{"level":"info","message":"GET /api/messages/conversations — 200 [65ms]","timestamp":"2026-06-06 17:17:43"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:17:43"}
+{"level":"info","message":"Conversations fetched for: admin@test.com","timestamp":"2026-06-06 17:17:43"}
+{"level":"info","message":"GET /api/messages/conversations — 304 [68ms]","timestamp":"2026-06-06 17:17:43"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:18:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:18:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:18:06"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [64ms]","timestamp":"2026-06-06 17:18:06"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:18:06"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:18:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:18:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:18:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:18:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [58ms]","timestamp":"2026-06-06 17:18:36"}
+{"level":"info","message":"GET /api/notifications — 304 [61ms]","timestamp":"2026-06-06 17:18:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [66ms]","timestamp":"2026-06-06 17:18:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:19:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:19:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:19:06"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [67ms]","timestamp":"2026-06-06 17:19:06"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [71ms]","timestamp":"2026-06-06 17:19:06"}
+{"level":"info","message":"GET /api/notifications — 304 [71ms]","timestamp":"2026-06-06 17:19:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:19:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:19:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:19:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [59ms]","timestamp":"2026-06-06 17:19:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [64ms]","timestamp":"2026-06-06 17:19:36"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:19:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:20:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:20:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:20:06"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:20:06"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:20:06"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [69ms]","timestamp":"2026-06-06 17:20:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:20:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:20:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:20:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [60ms]","timestamp":"2026-06-06 17:20:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [61ms]","timestamp":"2026-06-06 17:20:36"}
+{"level":"info","message":"GET /api/notifications — 304 [65ms]","timestamp":"2026-06-06 17:20:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:21:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:21:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:21:06"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [81ms]","timestamp":"2026-06-06 17:21:06"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [84ms]","timestamp":"2026-06-06 17:21:06"}
+{"level":"info","message":"GET /api/notifications — 304 [85ms]","timestamp":"2026-06-06 17:21:06"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:21:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:21:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:21:36"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [59ms]","timestamp":"2026-06-06 17:21:36"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [63ms]","timestamp":"2026-06-06 17:21:36"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:21:36"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:22:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:22:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:22:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:22:46"}
+{"level":"info","message":"GET /api/notifications — 304 [70ms]","timestamp":"2026-06-06 17:22:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [99ms]","timestamp":"2026-06-06 17:22:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:23:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:23:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:23:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:23:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:23:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [69ms]","timestamp":"2026-06-06 17:23:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:24:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:24:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:24:46"}
+{"level":"info","message":"GET /api/notifications — 304 [61ms]","timestamp":"2026-06-06 17:24:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [62ms]","timestamp":"2026-06-06 17:24:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:24:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:25:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:25:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:25:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [58ms]","timestamp":"2026-06-06 17:25:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:25:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:25:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:26:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:26:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:26:46"}
+{"level":"info","message":"GET /api/notifications — 304 [74ms]","timestamp":"2026-06-06 17:26:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [76ms]","timestamp":"2026-06-06 17:26:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [83ms]","timestamp":"2026-06-06 17:26:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:27:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:27:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:27:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:27:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [64ms]","timestamp":"2026-06-06 17:27:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [72ms]","timestamp":"2026-06-06 17:27:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:28:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:28:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:28:46"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:28:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [66ms]","timestamp":"2026-06-06 17:28:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [68ms]","timestamp":"2026-06-06 17:28:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:29:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:29:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:29:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [61ms]","timestamp":"2026-06-06 17:29:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [61ms]","timestamp":"2026-06-06 17:29:46"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:29:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:30:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:30:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:30:46"}
+{"level":"info","message":"GET /api/notifications — 304 [59ms]","timestamp":"2026-06-06 17:30:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [64ms]","timestamp":"2026-06-06 17:30:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [69ms]","timestamp":"2026-06-06 17:30:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:31:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:31:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:31:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [62ms]","timestamp":"2026-06-06 17:31:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [62ms]","timestamp":"2026-06-06 17:31:46"}
+{"level":"info","message":"GET /api/notifications — 304 [66ms]","timestamp":"2026-06-06 17:31:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:32:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:32:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:32:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [59ms]","timestamp":"2026-06-06 17:32:46"}
+{"level":"info","message":"GET /api/notifications — 304 [61ms]","timestamp":"2026-06-06 17:32:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [70ms]","timestamp":"2026-06-06 17:32:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:33:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:33:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:33:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [62ms]","timestamp":"2026-06-06 17:33:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:33:46"}
+{"level":"info","message":"GET /api/notifications — 304 [68ms]","timestamp":"2026-06-06 17:33:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:34:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:34:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:34:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [69ms]","timestamp":"2026-06-06 17:34:46"}
+{"level":"info","message":"GET /api/notifications — 304 [69ms]","timestamp":"2026-06-06 17:34:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [69ms]","timestamp":"2026-06-06 17:34:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:35:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:35:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:35:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [71ms]","timestamp":"2026-06-06 17:35:46"}
+{"level":"info","message":"GET /api/notifications — 304 [67ms]","timestamp":"2026-06-06 17:35:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [64ms]","timestamp":"2026-06-06 17:35:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:36:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:36:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:36:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [81ms]","timestamp":"2026-06-06 17:36:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [77ms]","timestamp":"2026-06-06 17:36:46"}
+{"level":"info","message":"GET /api/notifications — 304 [81ms]","timestamp":"2026-06-06 17:36:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:37:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:37:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:37:46"}
+{"level":"info","message":"GET /api/notifications — 304 [61ms]","timestamp":"2026-06-06 17:37:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [63ms]","timestamp":"2026-06-06 17:37:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:37:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:38:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:38:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:38:46"}
+{"level":"info","message":"GET /api/notifications — 304 [68ms]","timestamp":"2026-06-06 17:38:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [70ms]","timestamp":"2026-06-06 17:38:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [75ms]","timestamp":"2026-06-06 17:38:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:39:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:39:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:39:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [66ms]","timestamp":"2026-06-06 17:39:46"}
+{"level":"info","message":"GET /api/notifications — 304 [66ms]","timestamp":"2026-06-06 17:39:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:39:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:40:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:40:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:40:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:40:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [64ms]","timestamp":"2026-06-06 17:40:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:40:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:41:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:41:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:41:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:41:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [70ms]","timestamp":"2026-06-06 17:41:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [69ms]","timestamp":"2026-06-06 17:41:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:42:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:42:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:42:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:42:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [66ms]","timestamp":"2026-06-06 17:42:46"}
+{"level":"info","message":"GET /api/notifications — 304 [70ms]","timestamp":"2026-06-06 17:42:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:43:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:43:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:43:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [62ms]","timestamp":"2026-06-06 17:43:46"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:43:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [70ms]","timestamp":"2026-06-06 17:43:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:44:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:44:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:44:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [59ms]","timestamp":"2026-06-06 17:44:46"}
+{"level":"info","message":"GET /api/notifications — 304 [62ms]","timestamp":"2026-06-06 17:44:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:44:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:45:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:45:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:45:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [60ms]","timestamp":"2026-06-06 17:45:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:45:46"}
+{"level":"info","message":"GET /api/notifications — 304 [65ms]","timestamp":"2026-06-06 17:45:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:46:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:46:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:46:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [62ms]","timestamp":"2026-06-06 17:46:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [58ms]","timestamp":"2026-06-06 17:46:46"}
+{"level":"info","message":"GET /api/notifications — 304 [65ms]","timestamp":"2026-06-06 17:46:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:47:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:47:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:47:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [72ms]","timestamp":"2026-06-06 17:47:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [69ms]","timestamp":"2026-06-06 17:47:46"}
+{"level":"info","message":"GET /api/notifications — 304 [73ms]","timestamp":"2026-06-06 17:47:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:48:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:48:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:48:46"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:48:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [72ms]","timestamp":"2026-06-06 17:48:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [71ms]","timestamp":"2026-06-06 17:48:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:49:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:49:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:49:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [68ms]","timestamp":"2026-06-06 17:49:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [73ms]","timestamp":"2026-06-06 17:49:46"}
+{"level":"info","message":"GET /api/notifications — 304 [72ms]","timestamp":"2026-06-06 17:49:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:50:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:50:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:50:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [59ms]","timestamp":"2026-06-06 17:50:46"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:50:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [65ms]","timestamp":"2026-06-06 17:50:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:51:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:51:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:51:46"}
+{"level":"info","message":"GET /api/notifications — 304 [60ms]","timestamp":"2026-06-06 17:51:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [63ms]","timestamp":"2026-06-06 17:51:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [79ms]","timestamp":"2026-06-06 17:51:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:52:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:52:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:52:46"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:52:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [69ms]","timestamp":"2026-06-06 17:52:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [70ms]","timestamp":"2026-06-06 17:52:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:53:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:53:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:53:46"}
+{"level":"info","message":"GET /api/notifications — 304 [56ms]","timestamp":"2026-06-06 17:53:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [62ms]","timestamp":"2026-06-06 17:53:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:53:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:54:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:54:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:54:46"}
+{"level":"info","message":"GET /api/notifications — 304 [57ms]","timestamp":"2026-06-06 17:54:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [60ms]","timestamp":"2026-06-06 17:54:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [65ms]","timestamp":"2026-06-06 17:54:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:55:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:55:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:55:46"}
+{"level":"info","message":"GET /api/notifications — 304 [63ms]","timestamp":"2026-06-06 17:55:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [65ms]","timestamp":"2026-06-06 17:55:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [68ms]","timestamp":"2026-06-06 17:55:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:56:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:56:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 17:56:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [63ms]","timestamp":"2026-06-06 17:56:46"}
+{"level":"info","message":"GET /api/notifications — 304 [64ms]","timestamp":"2026-06-06 17:56:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [74ms]","timestamp":"2026-06-06 17:56:46"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-06 18:05:02"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-06 18:05:02"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 18:05:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 18:05:46"}
+{"level":"info","message":"Auth: admin@test.com (admin) authenticated","timestamp":"2026-06-06 18:05:46"}
+{"level":"info","message":"GET /api/messages/unread-count — 304 [92ms]","timestamp":"2026-06-06 18:05:46"}
+{"level":"info","message":"GET /api/notifications — 304 [78ms]","timestamp":"2026-06-06 18:05:46"}
+{"level":"info","message":"GET /api/auth/wishlist — 304 [88ms]","timestamp":"2026-06-06 18:05:46"}
+{"level":"info","message":"MongoDB Connected: ac-rvwwpgq-shard-00-00.tfwkbbt.mongodb.net","timestamp":"2026-06-06 18:06:05"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2026-06-06 18:06:05"}

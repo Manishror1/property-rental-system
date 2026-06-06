@@ -8,17 +8,20 @@ import PropertyList from './pages/PropertyList';
 import PropertyDetail from './pages/PropertyDetail';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import GoogleSuccess from './pages/GoogleSuccess';
+
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        {/* Navbar EVERY page pe */}
+        {/* Navbar on EVERY page*/}
         <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to="/properties" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/auth/google/success" element={<GoogleSuccess />} />
           <Route path="/properties" element={<PropertyList />} />
           <Route path="/properties/:id" element={<PropertyDetail />} />
 

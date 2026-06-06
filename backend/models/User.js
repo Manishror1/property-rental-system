@@ -25,16 +25,38 @@ const UserSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['user', 'admin'],  // CHANGED
-    default: 'user',          // CHANGED
+    enum: ['user', 'admin'],
+    default: 'user',
   },
   phone: { type: String, trim: true },
   pushSubscription: { type: Object, default: null },
   isActive: { type: Boolean, default: true },
+
+  // ✅ Google OAuth
+  googleId: { type: String, default: null },
+
+  // ✅ Wishlist
+  savedProperties: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Property' }],
+
+  // ✅ Account Deletion Request
+  deleteRequest: {
+    status: {
+      type: String,
+      enum: ['none', 'pending', 'approved', 'rejected'],
+      default: 'none'
+    },
+    requestedAt: { type: Date, default: null },
+    reason: { type: String, default: '' },
+    processedAt: { type: Date, default: null },
+  },
+
 }, { timestamps: true });
 
+// ✅ Password hash — Google users skip karein
 UserSchema.pre('save', async function () {
   if (!this.isModified('password')) return;
+  // Google OAuth users ka password hash mat karo
+  if (this.password && this.password.startsWith('google_')) return;
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
 });
@@ -42,9 +64,5 @@ UserSchema.pre('save', async function () {
 UserSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
-
-UserSchema.add({
-  savedProperties: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Property' }],
-});
 
 module.exports = mongoose.model('User', UserSchema);
