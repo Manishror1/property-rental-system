@@ -43,4 +43,8 @@ UserSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
+UserSchema.add({
+  savedProperties: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Property' }],
+});
+
 module.exports = mongoose.model('User', UserSchema);

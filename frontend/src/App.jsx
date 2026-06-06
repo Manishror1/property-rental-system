@@ -13,37 +13,32 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        {/* Navbar EVERY page pe */}
+        <Navbar />
         <Routes>
-          {/* Public Routes — Navbar dikhega */}
           <Route path="/" element={<Navigate to="/properties" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/properties" element={<><Navbar /><PropertyList /></>} />
-          <Route path="/properties/:id" element={<><Navbar /><PropertyDetail /></>} />
+          <Route path="/properties" element={<PropertyList />} />
+          <Route path="/properties/:id" element={<PropertyDetail />} />
 
-          {/* User Dashboard — Sidebar hoga */}
           <Route path="/dashboard" element={
             <ProtectedRoute allowedRoles={['user']}>
               <UserDashboard />
             </ProtectedRoute>
           } />
 
-          {/* Admin Dashboard — Sidebar hoga */}
           <Route path="/admin" element={
             <ProtectedRoute allowedRoles={['admin']}>
               <AdminDashboard />
             </ProtectedRoute>
           } />
 
-          {/* Unauthorized */}
           <Route path="/unauthorized" element={
             <div style={{ textAlign: 'center', marginTop: '80px' }}>
               <div style={{ fontSize: '48px' }}>🚫</div>
               <h2 style={{ marginTop: '16px' }}>Access Denied!</h2>
-              <p style={{ color: '#6b7280', marginTop: '8px' }}>
-                You don't have permission to access this page.
-              </p>
-              <a href="/login" style={{ color: '#7c3aed', marginTop: '16px', display: 'inline-block' }}>
+              <a href="/login" style={{ color: '#7c3aed', display: 'inline-block', marginTop: '12px' }}>
                 Go to Login
               </a>
             </div>

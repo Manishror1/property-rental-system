@@ -1,7 +1,6 @@
 // controllers/propertyController.js
-// Design Pattern: Repository Pattern — data access logic controller me isolated hai
+// Design Pattern: Repository Pattern
 
-const { validationResult } = require('express-validator');
 const Property = require('../models/Property');
 const logger = require('../utils/logger');
 
@@ -10,28 +9,13 @@ const createProperty = async (req, res) => {
   try {
     const { title, description, address, city, rentPerWeek, bedrooms, bathrooms, propertyType, amenities } = req.body;
 
-    // Manual validation
-    if (!title || !title.trim()) {
-      return res.status(400).json({ success: false, message: 'Title is required.' });
-    }
-    if (!description || !description.trim()) {
-      return res.status(400).json({ success: false, message: 'Description is required.' });
-    }
-    if (!address || !address.trim()) {
-      return res.status(400).json({ success: false, message: 'Address is required.' });
-    }
-    if (!city || !city.trim()) {
-      return res.status(400).json({ success: false, message: 'City is required.' });
-    }
-    if (!rentPerWeek || isNaN(rentPerWeek) || Number(rentPerWeek) <= 0) {
-      return res.status(400).json({ success: false, message: 'Valid rent per week is required.' });
-    }
-    if (!bedrooms || Number(bedrooms) < 1) {
-      return res.status(400).json({ success: false, message: 'At least 1 bedroom required.' });
-    }
-    if (!bathrooms || Number(bathrooms) < 1) {
-      return res.status(400).json({ success: false, message: 'At least 1 bathroom required.' });
-    }
+    if (!title || !title.trim()) return res.status(400).json({ success: false, message: 'Title is required.' });
+    if (!description || !description.trim()) return res.status(400).json({ success: false, message: 'Description is required.' });
+    if (!address || !address.trim()) return res.status(400).json({ success: false, message: 'Address is required.' });
+    if (!city || !city.trim()) return res.status(400).json({ success: false, message: 'City is required.' });
+    if (!rentPerWeek || isNaN(rentPerWeek) || Number(rentPerWeek) <= 0) return res.status(400).json({ success: false, message: 'Valid rent is required.' });
+    if (!bedrooms || Number(bedrooms) < 1) return res.status(400).json({ success: false, message: 'At least 1 bedroom required.' });
+    if (!bathrooms || Number(bathrooms) < 1) return res.status(400).json({ success: false, message: 'At least 1 bathroom required.' });
 
     const property = await Property.create({
       title: title.trim(),
@@ -47,17 +31,21 @@ const createProperty = async (req, res) => {
     });
 
     logger.info(`Property: Created "${property.title}" by ${req.user.email}`);
-    res.status(201).json({ success: true, message: 'Property listed successfully!', property });
+    res.status(201).json({ success: true, message: 'Property listed!', property });
   } catch (error) {
     logger.error(`Create Property Error: ${error.message}`);
     res.status(500).json({ success: false, message: 'Server error.' });
   }
 };
+
 // GET /api/properties
 const getAllProperties = async (req, res) => {
   try {
-    const { city, minRent, maxRent, bedrooms, propertyType } = req.query;
-    const filter = { status: 'available' };
+    const { city, minRent, maxRent, bedrooms, propertyType, status } = req.query;
+    const filter = {};
+
+    // Status filter — default available, but can pass any status
+    filter.status = status || 'available';
 
     if (city) filter.city = { $regex: city, $options: 'i' };
     if (bedrooms) filter.bedrooms = parseInt(bedrooms);
@@ -68,7 +56,10 @@ const getAllProperties = async (req, res) => {
       if (maxRent) filter.rentPerWeek.$lte = parseInt(maxRent);
     }
 
-    const properties = await Property.find(filter).populate('owner', 'name email phone').sort({ createdAt: -1 });
+    const properties = await Property.find(filter)
+      .populate('owner', 'name email phone')
+      .sort({ createdAt: -1 });
+
     res.status(200).json({ success: true, count: properties.length, properties });
   } catch (error) {
     logger.error(`Get Properties Error: ${error.message}`);
@@ -108,7 +99,7 @@ const updateProperty = async (req, res) => {
     }
 
     property = await Property.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
-    logger.info(`Property: Updated "${property.title}"`);
+    logger.info(`Property: Updated "${property.title}" by ${req.user.email}`);
     res.status(200).json({ success: true, message: 'Property updated!', property });
   } catch (error) {
     logger.error(`Update Property Error: ${error.message}`);

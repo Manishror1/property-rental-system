@@ -25,6 +25,7 @@ app.use('/api/properties', require('./routes/propertyRoutes'));
 app.use('/api/bookings', require('./routes/bookingRoutes'));
 app.use('/api/notifications', require('./routes/notificationRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
+app.use('/api/messages', require('./routes/messageRoutes'));
 
 // VAPID Public Key endpoint
 app.get('/api/notifications/vapid-key', (req, res) => {
@@ -61,7 +62,5 @@ const startServer = async () => {
 if (require.main === module) {
   startServer();
 }
-
-module.exports = app;
 
 module.exports = app;

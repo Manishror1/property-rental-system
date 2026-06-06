@@ -27,24 +27,33 @@ const Login = () => {
     return newErrors;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
+ // handleSubmit me ye fix karo
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const validationErrors = validate();
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+  setLoading(true);
+  try {
+    const user = await login(formData.email, formData.password);
+
+    // Agar kisi specific page se login page pe aaya tha — wahan wapas jao
+    const from = location.state?.from;
+    if (from && from !== '/login' && from !== '/register') {
+      navigate(from);
+    } else if (user.role === 'admin') {
+      navigate('/admin');
+    } else {
+      navigate('/dashboard');
     }
-    setLoading(true);
-    try {
-      const user = await login(formData.email, formData.password);
-      if (user.role === 'admin') navigate('/admin');
-      else navigate('/dashboard');
-    } catch (error) {
-      setApiError(error.response?.data?.message || 'Login failed. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
+  } catch (error) {
+    setApiError(error.response?.data?.message || 'Login failed.');
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', background: '#f3f4f6' }}>

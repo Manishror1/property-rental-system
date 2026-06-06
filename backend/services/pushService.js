@@ -1,66 +1,144 @@
 // services/pushService.js
-// Design Pattern: OBSERVER PATTERN
-// Booking events observe karke automatically subscribers ko notify karta hai
+// Design Pattern: Observer Pattern
 
-const webPush = require('web-push');
+const webpush = require('web-push');
 const Notification = require('../models/Notification');
 const User = require('../models/User');
 const logger = require('../utils/logger');
 
-webPush.setVapidDetails(
-  process.env.VAPID_EMAIL,
+// VAPID Keys
+webpush.setVapidDetails(
+  'mailto:admin@proprental.com',
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
 
-class PushNotificationService {
+// ── Core Function: Save to DB + Send Push ──────────────
+const createNotification = async (recipientId, title, body, type = 'general') => {
+  try {
+    // 1. Save to DB
+    const notification = await Notification.create({
+      recipient: recipientId,
+      title,
+      body,
+      type,
+      isRead: false,
+    });
 
-  async subscribe(userId, subscription) {
-    await User.findByIdAndUpdate(userId, { pushSubscription: subscription });
-    logger.info(`Push: User ${userId} subscribed`);
-    return { success: true };
-  }
+    // ✅ Success log add karo
+    logger.info(`Notification created: [${type}] "${title}" → ${recipientId}`);
 
-  async sendToUser(userId, title, body, type = 'system', relatedBooking = null) {
-    try {
-      // Notification database me save karo
-      const notification = await Notification.create({ recipient: userId, title, body, type, relatedBooking });
-
-      // User ka push subscription get karo
-      const user = await User.findById(userId);
-      if (user && user.pushSubscription) {
-        const payload = JSON.stringify({
-          title,
-          body,
-          icon: '/icons/icon-192x192.png',
-          data: { type, bookingId: relatedBooking },
-        });
-        await webPush.sendNotification(user.pushSubscription, payload);
-        logger.info(`Push: Notification sent to user ${userId} — ${title}`);
-      }
-      return notification;
-    } catch (error) {
-      if (error.statusCode === 410) {
-        // Subscription expire ho gayi — remove karo
-        await User.findByIdAndUpdate(userId, { pushSubscription: null });
-        logger.warn(`Push: Expired subscription removed for ${userId}`);
-      } else {
-        logger.error(`Push Error: ${error.message}`);
-      }
+    // 2. Browser Push — agar subscription hai
+    const user = await User.findById(recipientId);
+    if (user?.pushSubscription) {
+      const payload = JSON.stringify({ title, body, type });
+      await webpush.sendNotification(user.pushSubscription, payload)
+        .then(() => logger.info(`Push sent to: ${user.email}`))
+        .catch(err => logger.warn(`Push failed for ${user.email}: ${err.message}`));
     }
-  }
 
-  async notifyBookingRequest(ownerId, tenantName, propertyTitle, bookingId) {
-    return this.sendToUser(ownerId, '🏠 New Booking Request', `${tenantName} wants to view "${propertyTitle}"`, 'booking_request', bookingId);
+    return notification;
+  } catch (error) {
+    // ✅ Detailed error log
+    logger.error(`Create Notification Error [${type}]: ${error.message}`);
+    logger.error(`Recipient: ${recipientId}, Title: ${title}`);
   }
+};
 
-  async notifyBookingApproved(tenantId, propertyTitle, bookingId) {
-    return this.sendToUser(tenantId, '✅ Booking Approved!', `Your request for "${propertyTitle}" is approved!`, 'booking_approved', bookingId);
-  }
+// ── Booking Notifications ──────────────────────────────
 
-  async notifyBookingRejected(tenantId, propertyTitle, bookingId) {
-    return this.sendToUser(tenantId, '❌ Booking Rejected', `Your request for "${propertyTitle}" was rejected.`, 'booking_rejected', bookingId);
-  }
-}
+// New booking request — owner ko notify karo
+const notifyBookingRequest = async (ownerId, tenantName, propertyTitle, bookingId) => {
+  return createNotification(
+    ownerId,
+    '🏠 New Booking Request',
+    `${tenantName} wants to view "${propertyTitle}"`,
+    'booking_request'
+  );
+};
 
-module.exports = new PushNotificationService();
+// Booking approved — tenant ko notify karo
+const notifyBookingApproved = async (tenantId, propertyTitle, bookingId) => {
+  return createNotification(
+    tenantId,
+    '✅ Booking Approved!',
+    `Your viewing request for "${propertyTitle}" has been approved!`,
+    'booking_approved'
+  );
+};
+
+// Booking rejected — tenant ko notify karo
+const notifyBookingRejected = async (tenantId, propertyTitle, bookingId) => {
+  return createNotification(
+    tenantId,
+    '❌ Booking Rejected',
+    `Your viewing request for "${propertyTitle}" was not approved this time.`,
+    'booking_rejected'
+  );
+};
+
+// Booking cancelled — owner ko notify karo
+const notifyBookingCancelled = async (ownerId, tenantName, propertyTitle) => {
+  return createNotification(
+    ownerId,
+    '🚫 Booking Cancelled',
+    `${tenantName} cancelled their viewing request for "${propertyTitle}"`,
+    'booking_cancelled'
+  );
+};
+
+// ── Account Notifications ──────────────────────────────
+
+// Password change
+const notifyPasswordChanged = async (userId) => {
+  return createNotification(
+    userId,
+    '🔒 Password Changed',
+    'Your password was successfully changed. If this was not you, please contact support.',
+    'security'
+  );
+};
+
+// Profile updated
+const notifyProfileUpdated = async (userId, userName) => {
+  return createNotification(
+    userId,
+    '👤 Profile Updated',
+    `Your profile information has been updated successfully.`,
+    'account'
+  );
+};
+
+// New message received
+const notifyNewMessage = async (receiverId, senderName, propertyTitle) => {
+  return createNotification(
+    receiverId,
+    `💬 New Message from ${senderName}`,
+    propertyTitle
+      ? `About property: "${propertyTitle}"`
+      : 'You have a new message',
+    'message'
+  );
+};
+
+// Welcome notification
+const notifyWelcome = async (userId, userName) => {
+  return createNotification(
+    userId,
+    `🎉 Welcome to PropRental, ${userName}!`,
+    'Start by browsing available properties or listing your own.',
+    'welcome'
+  );
+};
+
+module.exports = {
+  createNotification,
+  notifyBookingRequest,
+  notifyBookingApproved,
+  notifyBookingRejected,
+  notifyBookingCancelled,
+  notifyPasswordChanged,
+  notifyProfileUpdated,
+  notifyNewMessage,
+  notifyWelcome,
+};
