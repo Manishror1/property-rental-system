@@ -16,38 +16,48 @@ webpush.setVapidDetails(
 // ── Core Function: Save to DB + Send Push ──────────────
 const createNotification = async (recipientId, title, body, type = 'general') => {
   try {
-    // 1. Save to DB
+    // Save to DB
     const notification = await Notification.create({
       recipient: recipientId,
-      title,
-      body,
-      type,
-      isRead: false,
+      title, body, type, isRead: false,
     });
 
-    // ✅ Success log add karo
-    logger.info(`Notification created: [${type}] "${title}" → ${recipientId}`);
+    logger.info(`Notification created: [${type}] → ${recipientId}`);
 
-    // 2. Browser Push — agar subscription hai
+    // Send browser push
     const user = await User.findById(recipientId);
+
     if (user?.pushSubscription) {
       const payload = JSON.stringify({ title, body, type });
+
       await webpush.sendNotification(user.pushSubscription, payload)
-        .then(() => logger.info(`Push sent to: ${user.email}`))
-        .catch(err => logger.warn(`Push failed for ${user.email}: ${err.message}`));
+        .then(() => {
+          logger.info(`✅ Push sent to: ${user.email}`);
+        })
+        .catch(async (err) => {
+          logger.warn(`❌ Push failed for ${user.email}: ${err.message}`);
+
+          // ✅ Agar subscription expire ho gayi — DB se hatao
+          if (err.statusCode === 410 || err.statusCode === 404) {
+            await User.findByIdAndUpdate(recipientId, {
+              pushSubscription: null
+            });
+            logger.info(`Removed expired subscription for: ${user.email}`);
+          }
+        });
+    } else {
+      logger.warn(`No push subscription for user: ${recipientId}`);
     }
 
     return notification;
   } catch (error) {
-    // ✅ Detailed error log
-    logger.error(`Create Notification Error [${type}]: ${error.message}`);
-    logger.error(`Recipient: ${recipientId}, Title: ${title}`);
+    logger.error(`Notification Error [${type}]: ${error.message}`);
   }
 };
-
+   
 // ── Booking Notifications ──────────────────────────────
 
-// New booking request — owner ko notify karo
+// New booking request — owner notification
 const notifyBookingRequest = async (ownerId, tenantName, propertyTitle, bookingId) => {
   return createNotification(
     ownerId,

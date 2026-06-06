@@ -69,6 +69,24 @@ const AdminDashboard = () => {
     }
   }, [location.state]);
 
+  
+// ✅ Auto re-subscribe on every app load
+useEffect(() => {
+  const autoSubscribe = async () => {
+    try {
+      // Only if permission already granted — don't ask again
+      if (Notification.permission === 'granted') {
+        const { subscribeToPush } = await import('../services/pushService');
+        await subscribeToPush();
+        console.log('[Dashboard] Push re-subscribed');
+      }
+    } catch (e) {
+      console.log('[Dashboard] Auto subscribe failed:', e);
+    }
+  };
+  autoSubscribe();
+}, []); // Run once on mount
+
   const pendingUsers = users.filter(u => !u.isActive).length;
   const unreadNotifs = notifications.filter(n => !n.isRead).length;
 

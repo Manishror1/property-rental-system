@@ -66,6 +66,23 @@ const UserDashboard = () => {
     if (location.state?.tab) setActiveTab(location.state.tab);
   }, [location.state]);
 
+  // ✅ Auto re-subscribe on every app load
+useEffect(() => {
+  const autoSubscribe = async () => {
+    try {
+      // Only if permission already granted — don't ask again
+      if (Notification.permission === 'granted') {
+        const { subscribeToPush } = await import('../services/pushService');
+        await subscribeToPush();
+        console.log('[Dashboard] Push re-subscribed');
+      }
+    } catch (e) {
+      console.log('[Dashboard] Auto subscribe failed:', e);
+    }
+  };
+  autoSubscribe();
+}, []); // Run once on mount
+
   const pendingRequests = bookingRequests.filter(b => b.status === 'pending').length;
   const unreadNotifs = notifications.filter(n => !n.isRead).length;
 
@@ -77,15 +94,24 @@ const tabs = [
   { id: 'browse', label: '🔍 Browse' },
 ];
 
-  const handleEnablePush = async () => {
-    setPushStatus('Enabling...');
-    try {
-      await subscribeToPush();
-      setPushStatus('✅ Notifications enabled!');
-    } catch {
-      setPushStatus('❌ Failed.');
+  /** Enable push notifications — requests Windows permission */
+const handleEnablePush = async () => {
+  try {
+    // Import push service
+    const { subscribeToPush } = await import('../services/pushService');
+    const success = await subscribeToPush();
+
+    if (success) {
+      alert('✅ Notifications enabled! You will now receive Windows notifications.');
+      fetchData();
+    } else {
+      alert('❌ Please allow notifications in your browser settings.\n\nClick the 🔒 lock icon in address bar → Notifications → Allow');
     }
-  };
+  } catch (error) {
+    console.error('Enable push error:', error);
+    alert('Failed to enable notifications. Please try again.');
+  }
+};
 
   const handleCancelBooking = async (id) => {
     if (!window.confirm('Cancel this booking?')) return;
