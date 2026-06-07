@@ -5,6 +5,7 @@ const { subscribe, getNotifications, markAsRead, testNotification } = require('.
 const { protect } = require('../middleware/authMiddleware');
 const Notification = require('../models/Notification');
 
+// POST — subscribe to notifications
 router.post('/subscribe', protect, subscribe);
 router.get('/', protect, getNotifications);
 router.put('/read-all', protect, async (req, res) => {

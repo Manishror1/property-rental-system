@@ -6,15 +6,17 @@ import { useAuth } from '../contexts/AuthContext';
 const PropertyCard = ({ property, onViewDetails, savedIds = [] }) => {
   const navigate = useNavigate();
   const { user } = useAuth();
+    // ── Property fields destructuring ────────────────────────────
   const { _id, title, address, city, rentPerWeek, bedrooms, bathrooms, propertyType, status } = property;
 
   const [isSaved, setIsSaved] = useState(savedIds.includes(_id));
   const [saving, setSaving] = useState(false);
-
+  // ── Sync saved state when savedIds prop changes ──────────────
   useEffect(() => {
     setIsSaved(savedIds.includes(_id));
   }, [savedIds, _id]);
 
+    // ── Handle wishlist toggle — redirects to login if not logged in
   const handleWishlist = async (e) => {
     e.stopPropagation();
     if (!user) { navigate('/login'); return; }
@@ -29,8 +31,10 @@ const PropertyCard = ({ property, onViewDetails, savedIds = [] }) => {
     }
   };
 
+  // ── Status badge CSS classes mapping ──────────────────────────
   const statusBadge = { available: 'badge-green', rented: 'badge-red', unavailable: 'badge-gray' };
 
+    // ── Handle View Details button click ──────────────────────────
   const handleViewDetails = (e) => {
     e.stopPropagation();
     if (onViewDetails) onViewDetails(property);
@@ -76,6 +80,7 @@ const PropertyCard = ({ property, onViewDetails, savedIds = [] }) => {
         </span>
       </div>
 
+      {/* ── Price + View Details Button ────────────────────────── */}
       <p style={{ fontSize: '13px', color: '#6b7280' }}>📍 {address}, {city}</p>
 
       <div style={{ display: 'flex', gap: '12px', fontSize: '12px', color: '#6b7280' }}>

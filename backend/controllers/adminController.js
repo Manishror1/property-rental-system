@@ -5,6 +5,7 @@ const Property = require('../models/Property');
 const Booking = require('../models/Booking');
 const logger = require('../utils/logger');
 
+// GET /api/admin/users
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find().select('-password').sort({ createdAt: -1 });
@@ -13,7 +14,7 @@ const getAllUsers = async (req, res) => {
     res.status(500).json({ success: false, message: 'Server error.' });
   }
 };
-
+// PUT /api/admin/users/:id/toggle
 const toggleUserStatus = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
@@ -28,7 +29,7 @@ const toggleUserStatus = async (req, res) => {
     res.status(500).json({ success: false, message: 'Server error.' });
   }
 };
-
+// GET /api/admin/dashboard-stats
 const getDashboardStats = async (req, res) => {
   try {
     const [totalUsers, totalProperties, totalBookings, pendingBookings] = await Promise.all([
@@ -42,7 +43,7 @@ const getDashboardStats = async (req, res) => {
     res.status(500).json({ success: false, message: 'Server error.' });
   }
 };
-
+// DELETE /api/admin/properties/:id
 const adminDeleteProperty = async (req, res) => {
   try {
     const property = await Property.findByIdAndDelete(req.params.id);

@@ -9,11 +9,12 @@ import EmbeddedPropertyDetail from '../components/EmbeddedPropertyDetail';
 import ChatTab from '../components/ChatTab';
 import PropertyCard from '../components/PropertyCard';
 
+// ── Admin Dashboard Page ─────────────────────────────────────────
 const AdminDashboard = () => {
   const { user } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
-
+// ── State Variables ─────────────────────────────────────────────
   const initialTab = location.state?.tab || 'dashboard';
   const [activeTab, setActiveTab] = useState(initialTab);
   const [selectedPropertyId, setSelectedPropertyId] = useState(null);
@@ -27,6 +28,7 @@ const AdminDashboard = () => {
   const [unreadMessages, setUnreadMessages] = useState(0);
   const [loading, setLoading] = useState(true);
 
+  // ── Fetch All Admin Data ───────────────────────────────────────
   const fetchData = async () => {
     try {
       const [statsRes, usersRes, bookingsRes, notifsRes, wishlistRes, msgRes] = await Promise.all([
@@ -60,7 +62,7 @@ const AdminDashboard = () => {
       setLoading(false);
     }
   };
-
+// ── Initial Data Fetch on Component Mount ─────────────────────
   useEffect(() => { fetchData(); }, []);
 
   useEffect(() => {
@@ -69,7 +71,7 @@ const AdminDashboard = () => {
     }
   }, [location.state]);
 
-  
+
 // ✅ Auto re-subscribe on every app load
 useEffect(() => {
   const autoSubscribe = async () => {
@@ -94,6 +96,7 @@ useEffect(() => {
     typeof p === 'object' ? p._id?.toString() : p?.toString()
   );
 
+  // ── Tab Definitions ─────────────────────────────────────────────
   const tabs = [
     { id: 'dashboard', label: '📊 Overview' },
     { id: 'users', label: `👥 Users${pendingUsers > 0 ? ` (${pendingUsers})` : ''}` },
@@ -102,6 +105,7 @@ useEffect(() => {
     { id: 'browse', label: '🔍 Browse' },
   ];
 
+  // ── Action Handlers ───────────────────────────────────────────
   const handleToggleUser = async (userId) => {
     if (!window.confirm('Toggle this user\'s status?')) return;
     try {
@@ -112,6 +116,7 @@ useEffect(() => {
     }
   };
 
+// Admin can delete any property
   const handleDeleteProperty = async (propertyId) => {
     if (!window.confirm('Permanently delete this property?')) return;
     try {
@@ -122,6 +127,7 @@ useEffect(() => {
     }
   };
 
+  // Mark a single notification as read
   const handleMarkAllRead = async () => {
     try {
       await api.put('/notifications/read-all');
@@ -232,7 +238,7 @@ useEffect(() => {
                 <div className="stat-box-icon" style={{ background: '#fdf6b2' }}>⏳</div>
               </div>
             </div>
-
+ {/* Visualize user roles and booking statuses with progress bars */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
               <div className="card">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
@@ -269,7 +275,7 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
-
+{/* Visualize booking statuses with progress bars */}
               <div className="card">
                 <h2 className="section-title">Booking Status Overview</h2>
                 {[
@@ -294,7 +300,7 @@ useEffect(() => {
                 })}
               </div>
             </div>
-
+{/* Show property status breakdown with badges */}
             <div className="card" style={{ marginTop: '20px' }}>
               <h2 className="section-title" style={{ marginBottom: '14px' }}>Properties Overview</h2>
               <div style={{ display: 'flex', gap: '16px' }}>

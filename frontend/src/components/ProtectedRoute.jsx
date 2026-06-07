@@ -4,6 +4,8 @@ import { useAuth } from '../contexts/AuthContext';
 const ProtectedRoute = ({ children, allowedRoles }) => {
   const { user, loading } = useAuth();
 
+  // ── Loading State — show spinner while auth context initializes ─
+
   if (loading) {
     return (
       <div style={{
@@ -13,6 +15,8 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
         height: '100vh',
         background: '#f3f4f6'
       }}>
+                  {/* Loading spinner icon */}
+
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏠</div>
           <p style={{ color: '#6b7280' }}>Loading...</p>
@@ -20,6 +24,8 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
       </div>
     );
   }
+  
+  // ── Not Authenticated — redirect to login ───────────────────────
 
   if (!user) return <Navigate to="/login" replace />;
 

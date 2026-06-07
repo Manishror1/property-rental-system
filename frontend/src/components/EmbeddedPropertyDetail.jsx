@@ -58,6 +58,7 @@ const EmbeddedPropertyDetail = ({ propertyId, onBack }) => {
     checkExistingBooking();
   }, [propertyId, user]);
 
+  // Handle booking submission
   const handleBooking = async (e) => {
     e.preventDefault();
     const dateErr = validateDate(bookingData.preferredDate);

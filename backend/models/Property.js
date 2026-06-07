@@ -39,5 +39,5 @@ const PropertySchema = new mongoose.Schema({
     required: true,
   },
 }, { timestamps: true });
-
+// Virtual field for bookings related to this property
 module.exports = mongoose.model('Property', PropertySchema);

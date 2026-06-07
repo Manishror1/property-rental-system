@@ -37,7 +37,7 @@ const createNotification = async (recipientId, title, body, type = 'general') =>
         .catch(async (err) => {
           logger.warn(`❌ Push failed for ${user.email}: ${err.message}`);
 
-          // ✅ Agar subscription expire ho gayi — DB se hatao
+// If subscription is expired or invalid, remove it from DB
           if (err.statusCode === 410 || err.statusCode === 404) {
             await User.findByIdAndUpdate(recipientId, {
               pushSubscription: null
@@ -67,7 +67,7 @@ const notifyBookingRequest = async (ownerId, tenantName, propertyTitle, bookingI
   );
 };
 
-// Booking approved — tenant ko notify karo
+// Booking approved — tenant notify booking approved notification
 const notifyBookingApproved = async (tenantId, propertyTitle, bookingId) => {
   return createNotification(
     tenantId,
@@ -77,7 +77,7 @@ const notifyBookingApproved = async (tenantId, propertyTitle, bookingId) => {
   );
 };
 
-// Booking rejected — tenant ko notify karo
+// Booking rejected — tenant notify booking rejected notification
 const notifyBookingRejected = async (tenantId, propertyTitle, bookingId) => {
   return createNotification(
     tenantId,
@@ -87,7 +87,7 @@ const notifyBookingRejected = async (tenantId, propertyTitle, bookingId) => {
   );
 };
 
-// Booking cancelled — owner ko notify karo
+// Booking cancelled — owner notify booking cancelled notification
 const notifyBookingCancelled = async (ownerId, tenantName, propertyTitle) => {
   return createNotification(
     ownerId,

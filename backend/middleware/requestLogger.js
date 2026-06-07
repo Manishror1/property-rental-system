@@ -1,8 +1,8 @@
 // middleware/requestLogger.js
-// Har API request ko log karta hai - Task 07 debugging ke liye
-
+// Middleware to log incoming requests and their response status
 const logger = require('../utils/logger');
 
+// Middleware function
 const requestLogger = (req, res, next) => {
   const start = Date.now();
   res.on('finish', () => {

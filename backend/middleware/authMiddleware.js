@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const logger = require('../utils/logger');
 
-// Route protect karta hai - JWT verify karta hai
+// Protect routes - verify JWT token
 const protect = async (req, res, next) => {
   let token;
 
@@ -17,7 +17,7 @@ const protect = async (req, res, next) => {
   if (!token) {
     return res.status(401).json({ success: false, message: 'Not authorized. Please login.' });
   }
-
+// Verify token and attach user to request
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id).select('-password');

@@ -1,10 +1,3 @@
-/**
- * Login.jsx — Authentication Page
- * Features: Email/Password login + Google OAuth
- * Validation: Client-side with validators utility
- * Design: Split layout with gradient left panel
- */
-
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -376,5 +369,10 @@ const Login = () => {
     </div>
   );
 };
-
+/**
+ * Login.jsx — Authentication Page
+ * Features: Email/Password login + Google OAuth
+ * Validation: Client-side with validators utility
+ * Design: Split layout with gradient left panel
+ */
 export default Login;

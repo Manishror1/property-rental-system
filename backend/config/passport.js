@@ -3,6 +3,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/User');
 const logger = require('../utils/logger');
 
+// Google OAuth Strategy
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -11,6 +12,7 @@ passport.use(new GoogleStrategy({
   try {
     let user = await User.findOne({ email: profile.emails[0].value });
 
+    //if user exists but doesn't have googleId, link it
     if (user) {
       if (!user.googleId) {
         user.googleId = profile.id;
@@ -20,6 +22,7 @@ passport.use(new GoogleStrategy({
       return done(null, user);
     }
 
+    // New user - create account
     user = await User.create({
       name: profile.displayName,
       email: profile.emails[0].value,
@@ -37,6 +40,7 @@ passport.use(new GoogleStrategy({
   }
 }));
 
+// Serialize and Deserialize User
 passport.serializeUser((user, done) => done(null, user.id));
 passport.deserializeUser(async (id, done) => {
   const user = await User.findById(id);

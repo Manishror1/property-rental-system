@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// models/Notification.js
 const NotificationSchema = new mongoose.Schema({
   recipient: {
     type: mongoose.Schema.Types.ObjectId,
@@ -16,7 +17,7 @@ const NotificationSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    // ✅ Saare types add karo — yahi problem thi!
+// Notification types for categorization
     enum: [
       'general',
       'booking_request',

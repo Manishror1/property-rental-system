@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
+// models/User.js
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -32,13 +33,13 @@ const UserSchema = new mongoose.Schema({
   pushSubscription: { type: Object, default: null },
   isActive: { type: Boolean, default: true },
 
-  // ✅ Google OAuth
+  // Google OAuth
   googleId: { type: String, default: null },
 
-  // ✅ Wishlist
+  //  Wishlist
   savedProperties: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Property' }],
 
-  // ✅ Account Deletion Request
+  //  Account Deletion Request
   deleteRequest: {
     status: {
       type: String,
@@ -52,7 +53,7 @@ const UserSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-// ✅ Password hash — Google users skip karein
+// Password hashing middleware
 UserSchema.pre('save', async function () {
   if (!this.isModified('password')) return;
   // Google OAuth users ka password hash mat karo
@@ -61,6 +62,7 @@ UserSchema.pre('save', async function () {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
+// Method to compare entered password with hashed password
 UserSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };

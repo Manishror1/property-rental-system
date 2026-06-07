@@ -30,6 +30,7 @@ router.get('/google/callback',
     }
   }
 );
+// handle registration and login
 router.post('/register', register);
 router.post('/login', login);
 router.get('/me', protect, getMe);

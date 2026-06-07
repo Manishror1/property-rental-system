@@ -112,7 +112,7 @@ const handleEnablePush = async () => {
     alert('Failed to enable notifications. Please try again.');
   }
 };
-
+// Cancel a booking — tenant can cancel pending bookings
   const handleCancelBooking = async (id) => {
     if (!window.confirm('Cancel this booking?')) return;
     try {
@@ -122,7 +122,7 @@ const handleEnablePush = async () => {
       alert(error.response?.data?.message || 'Failed.');
     }
   };
-
+// Owner can approve/reject booking requests
   const handleBookingAction = async (id, status) => {
     try {
       const note = status === 'approved' ? 'Approved! Please come on time.' : 'Sorry, not available.';
@@ -155,7 +155,7 @@ const handleEnablePush = async () => {
     });
     setFormError('');
   };
-
+// Create or update property listing
   const handleSubmitProperty = async (e) => {
     e.preventDefault();
     const required = ['title', 'description', 'address', 'city', 'rentPerWeek', 'bedrooms', 'bathrooms'];

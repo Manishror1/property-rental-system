@@ -1,10 +1,3 @@
-/**
- * Register.jsx — User Registration Page
- * Features: Name/Email/Password/Phone + Google OAuth signup
- * Validation: Client-side with validators utility
- * Design: Split layout — matching Login page style
- */
-
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -456,5 +449,10 @@ const Register = () => {
     </div>
   );
 };
-
+/**
+ * Register.jsx — User Registration Page
+ * Features: Name/Email/Password/Phone + Google OAuth signup
+ * Validation: Client-side with validators utility
+ * Design: Split layout — matching Login page style
+ */
 export default Register;

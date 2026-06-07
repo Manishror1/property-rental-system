@@ -10,6 +10,7 @@ const ChatWindow = ({ conversation, onBack }) => {
   const [sending, setSending] = useState(false);
   const messagesEndRef = useRef(null);
 
+  // Fetch messages for the conversation
   const fetchMessages = async () => {
     try {
       const res = await api.get(`/messages/${conversation.user._id}`);
@@ -20,7 +21,7 @@ const ChatWindow = ({ conversation, onBack }) => {
       setLoading(false);
     }
   };
-
+// Fetch messages on mount and when conversation changes, with polling for new messages
   useEffect(() => {
     fetchMessages();
     const interval = setInterval(fetchMessages, 5000); // Poll every 5 seconds
@@ -34,7 +35,7 @@ const ChatWindow = ({ conversation, onBack }) => {
   const handleSend = async (e) => {
     e.preventDefault();
     if (!newMessage.trim()) return;
-
+// Prevent multiple sends
     setSending(true);
     try {
       await api.post('/messages', {
@@ -50,7 +51,7 @@ const ChatWindow = ({ conversation, onBack }) => {
       setSending(false);
     }
   };
-
+// Mark messages as read when opening the conversation
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '500px' }}>
 
@@ -89,6 +90,7 @@ const ChatWindow = ({ conversation, onBack }) => {
         display: 'flex', flexDirection: 'column', gap: '8px',
         background: '#f8fafc'
       }}>
+        {/* Show loading state, empty state, or messages */}
         {loading ? (
           <div style={{ textAlign: 'center', color: '#6b7280', padding: '20px' }}>Loading...</div>
         ) : messages.length === 0 ? (
@@ -119,6 +121,7 @@ const ChatWindow = ({ conversation, onBack }) => {
             </div>
           );
         })}
+        {/* div to scroll into view for new messages */}
         <div ref={messagesEndRef} />
       </div>
 

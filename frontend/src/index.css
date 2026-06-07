@@ -286,6 +286,7 @@ body {
   background: white;
   outline: none;
   transition: var(--transition);
+  appearance: none;
   -webkit-appearance: none;
 }
 
